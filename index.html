@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kiroshiatsu — Massagepraxis von Victor A. Koldobsky in Bielefeld. Über 25 Jahre Erfahrung in Shiatsu, Chiromassage, Tuina und ganzheitlicher Körperarbeit." />
+    <meta name="theme-color" content="#0A0A0A" />
+    <title>Kiroshiatsu — Massagepraxis Victor A. Koldobsky · Bielefeld</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <span class="loader-word">KI</span>
+            <span class="loader-word">RO</span>
+            <span class="loader-word">SHIATSU</span>
+        </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Cursor (desktop only) -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#top" class="nav-logo" data-magnetic>
+                <span class="logo-mark">Ki</span>
+                <span class="logo-text">roshiatsu</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">Über mich</a>
+                <a href="#method" class="nav-link">Methode</a>
+                <a href="#services" class="nav-link">Behandlungen</a>
+                <a href="#benefits" class="nav-link">Werte</a>
+                <a href="#testimonials" class="nav-link">Stimmen</a>
+                <a href="#contact" class="nav-link">Kontakt</a>
+            </nav>
+
+            <a href="#contact" class="nav-cta" data-magnetic>
+                <span>Termin buchen</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M13 5l7 7-7 7"/>
+                </svg>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Menü">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-menu-links">
+            <a href="#about">Über mich</a>
+            <a href="#method">Methode</a>
+            <a href="#services">Behandlungen</a>
+            <a href="#benefits">Werte</a>
+            <a href="#testimonials">Stimmen</a>
+            <a href="#contact">Kontakt</a>
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="tel:+4952197174457">+49 521 97174457</a>
+            <a href="mailto:info@kiroshiatsu.de">info@kiroshiatsu.de</a>
+        </div>
+    </div>
+
+    <main id="top">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-bg">
+                <div class="hero-gradient"></div>
+                <div class="hero-grain"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-tagline reveal">
+                    <span class="tag-line"></span>
+                    <span>Bielefeld · Seit 2013</span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="line reveal-stagger"><span>Die Kunst</span></span>
+                    <span class="line reveal-stagger"><span>der <em>ganzheitlichen</em></span></span>
+                    <span class="line reveal-stagger"><span>Heilung.</span></span>
+                </h1>
+
+                <p class="hero-subtitle reveal">
+                    Über 25 Jahre Erfahrung verbunden mit westlicher Präzision
+                    und östlicher Weisheit. Jede Behandlung — ein Ritual
+                    für Körper, Geist und Balance.
+                </p>
+
+                <div class="hero-actions reveal">
+                    <a href="#contact" class="btn btn-primary" data-magnetic>
+                        <span>Erstgespräch vereinbaren</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M13 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#services" class="btn btn-ghost" data-magnetic>
+                        <span>Behandlungen entdecken</span>
+                    </a>
+                </div>
+
+                <div class="hero-stats reveal">
+                    <div class="stat">
+                        <span class="stat-num" data-count="25">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Jahre Erfahrung</span>
+                    </div>
+                    <div class="stat-sep"></div>
+                    <div class="stat">
+                        <span class="stat-num" data-count="30">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Behandlungsarten</span>
+                    </div>
+                    <div class="stat-sep"></div>
+                    <div class="stat">
+                        <span class="stat-num" data-count="12">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Jahre in Bielefeld</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-scroll">
+                <span>Entdecken</span>
+                <div class="scroll-line"></div>
+            </div>
+
+            <div class="hero-sidemark">
+                <span>K · S — 2013</span>
+            </div>
+        </section>
+
+        <!-- MARQUEE -->
+        <section class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>Shiatsu</span><em>◆</em>
+                <span>Chiromassage</span><em>◆</em>
+                <span>Tuina</span><em>◆</em>
+                <span>Sotai Ho</span><em>◆</em>
+                <span>Lymphdrainage</span><em>◆</em>
+                <span>Kryolipolyse</span><em>◆</em>
+                <span>Fußreflex</span><em>◆</em>
+                <span>Schröpfen</span><em>◆</em>
+                <span>Shiatsu</span><em>◆</em>
+                <span>Chiromassage</span><em>◆</em>
+                <span>Tuina</span><em>◆</em>
+                <span>Sotai Ho</span><em>◆</em>
+                <span>Lymphdrainage</span><em>◆</em>
+                <span>Kryolipolyse</span><em>◆</em>
+                <span>Fußreflex</span><em>◆</em>
+                <span>Schröpfen</span><em>◆</em>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section about" id="about">
+            <div class="container grid-split">
+                <div class="col-visual reveal-parallax">
+                    <div class="visual-frame">
+                        <div class="visual-inner">
+                            <div class="portrait-placeholder">
+                                <span class="portrait-initials">VK</span>
+                                <div class="portrait-ring"></div>
+                                <div class="portrait-ring ring-2"></div>
+                            </div>
+                        </div>
+                        <div class="visual-caption">
+                            <span>Victor A. Koldobsky</span>
+                            <small>Diplomierter Chiromasseur</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-text">
+                    <span class="eyebrow reveal">01 · Über mich</span>
+                    <h2 class="section-title reveal">
+                        Zwei Welten. <em>Eine</em> Methode.
+                    </h2>
+                    <p class="lead reveal">
+                        Victor A. Koldobsky vereint in seiner Praxis das Beste
+                        aus westlicher Chiromassage und östlicher Heilkunst —
+                        eine Synthese, die er über mehr als zwei Jahrzehnte
+                        verfeinert hat.
+                    </p>
+                    <p class="body reveal">
+                        Geboren in Argentinien, geschult auf Lanzarote und
+                        seit über zwölf Jahren in Bielefeld, praktiziert er
+                        eine Form der Körperarbeit, die Tradition, Anatomie
+                        und Intuition in Einklang bringt. Jede Sitzung ist
+                        präzise, individuell und auf den Menschen abgestimmt.
+                    </p>
+
+                    <ul class="about-facts reveal">
+                        <li>
+                            <span class="fact-num">25+</span>
+                            <span class="fact-label">Jahre in Europa tätig als offizieller Chiromasseur</span>
+                        </li>
+                        <li>
+                            <span class="fact-num">30+</span>
+                            <span class="fact-label">Spezielle Wellness- und Therapieformen im Angebot</span>
+                        </li>
+                        <li>
+                            <span class="fact-num">∞</span>
+                            <span class="fact-label">Begleitung auf dem Weg zu nachhaltigem Wohlbefinden</span>
+                        </li>
+                    </ul>
+
+                    <div class="signature reveal">
+                        <span class="sig-text">V. Koldobsky</span>
+                        <small>Gründer · Kiroshiatsu</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- METHOD -->
+        <section class="section method" id="method">
+            <div class="container">
+                <div class="method-header">
+                    <span class="eyebrow reveal">02 · Die Methode</span>
+                    <h2 class="section-title reveal">
+                        <em>Kiro-Shiatsu</em> — eine eigens <br/>entwickelte Kunst.
+                    </h2>
+                </div>
+
+                <div class="method-grid">
+                    <article class="method-card reveal-up">
+                        <span class="method-step">I</span>
+                        <h3>Anamnese</h3>
+                        <p>
+                            Jede Behandlung beginnt mit einem vertraulichen
+                            Gespräch. Wir erfassen Ihre Geschichte, Ihre
+                            Beschwerden und Ihre Ziele — ganzheitlich und
+                            ohne Eile.
+                        </p>
+                        <div class="method-line"></div>
+                    </article>
+
+                    <article class="method-card reveal-up" style="--d:.1s">
+                        <span class="method-step">II</span>
+                        <h3>Diagnose</h3>
+                        <p>
+                            Durch präzise Tastuntersuchung, Meridian-Analyse
+                            und strukturelle Bewertung identifizieren wir
+                            Spannungsmuster, Blockaden und energetische
+                            Ungleichgewichte.
+                        </p>
+                        <div class="method-line"></div>
+                    </article>
+
+                    <article class="method-card reveal-up" style="--d:.2s">
+                        <span class="method-step">III</span>
+                        <h3>Behandlung</h3>
+                        <p>
+                            Westliche Chiromassage trifft auf Shiatsu, Tuina,
+                            Sotai Ho und gezielte Techniken wie Schröpfen,
+                            Kaltlaser oder Lymphdrainage — exakt auf Sie
+                            zugeschnitten.
+                        </p>
+                        <div class="method-line"></div>
+                    </article>
+
+                    <article class="method-card reveal-up" style="--d:.3s">
+                        <span class="method-step">IV</span>
+                        <h3>Begleitung</h3>
+                        <p>
+                            Nachhaltige Veränderung braucht Kontinuität.
+                            Wir entwickeln einen Behandlungsplan, der Sie
+                            schrittweise zu langfristigem Wohlbefinden führt.
+                        </p>
+                        <div class="method-line"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="section services" id="services">
+            <div class="container">
+                <div class="services-header">
+                    <span class="eyebrow reveal">03 · Behandlungen</span>
+                    <h2 class="section-title reveal">
+                        Mehr als <em>30</em> spezielle<br/>
+                        Wellness- und Heilformen.
+                    </h2>
+                    <p class="section-intro reveal">
+                        Eine kuratierte Auswahl unserer meistgefragten
+                        Behandlungen — alle individuell kombinierbar und
+                        optional als medizinische Heilbehandlung
+                        mit Privatrezept verfügbar.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card reveal-up" data-tilt>
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
+                                <circle cx="24" cy="24" r="18"/>
+                                <path d="M24 6c6 8 6 28 0 36M24 6c-6 8-6 28 0 36M6 24h36"/>
+                            </svg>
+                        </div>
+                        <div class="service-meta">
+                            <span>01</span><span>Signature</span>
+                        </div>
+                        <h3>Shiatsu</h3>
+                        <p>
+                            Japanische Druckpunkttechnik entlang der Meridiane.
+                            Reguliert den Energiefluss, löst tiefe Spannungen
+                            und fördert innere Balance.
+                        </p>
+                        <div class="service-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal-up" data-tilt style="--d:.05s">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
+                                <path d="M10 24c4-10 10-14 14-14s10 4 14 14-4 14-14 14-18-4-14-14Z"/>
+                                <path d="M18 24h12M24 18v12"/>
+                            </svg>
+                        </div>
+                        <div class="service-meta">
+                            <span>02</span><span>Tradition</span>
+                        </div>
+                        <h3>Tuina</h3>
+                        <p>
+                            Traditionelle chinesische Manualtherapie. Kombiniert
+                            Dehnung, Druck und rhythmische Bewegungen zur
+                            Wiederherstellung der Körperharmonie.
+                        </p>
+                        <div class="service-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal-up" data-tilt style="--d:.1s">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
+                                <path d="M24 6v8M24 34v8M6 24h8M34 24h8M11 11l6 6M31 31l6 6M11 37l6-6M31 17l6-6"/>
+                                <circle cx="24" cy="24" r="4"/>
+                            </svg>
+                        </div>
+                        <div class="service-meta">
+                            <span>03</span><span>Wellness</span>
+                        </div>
+                        <h3>Wellness-Massage</h3>
+                        <p>
+                            Ein sinnliches Ritual zur Tiefenentspannung.
+                            Warme Öle, fließende Bewegungen und vollständige
+                            Auszeit vom Alltag — für Körper und Geist.
+                        </p>
+                        <div class="service-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal-up" data-tilt style="--d:.15s">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
+                                <path d="M8 30c4-6 8-10 16-10s12 4 16 10"/>
+                                <path d="M24 10v10M20 14l8 0"/>
+                                <circle cx="24" cy="36" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="service-meta">
+                            <span>04</span><span>Performance</span>
+                        </div>
+                        <h3>Sport-Massage</h3>
+                        <p>
+                            Gezielte Behandlung für Aktive und Athleten.
+                            Beschleunigt Regeneration, beugt Verletzungen
+                            vor und optimiert die Leistungsfähigkeit.
+                        </p>
+                        <div class="service-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal-up" data-tilt style="--d:.2s">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
+                                <path d="M24 8c-8 0-14 6-14 14 0 10 14 18 14 18s14-8 14-18c0-8-6-14-14-14Z"/>
+                                <circle cx="24" cy="22" r="4"/>
+                            </svg>
+                        </div>
+                        <div class="service-meta">
+                            <span>05</span><span>Spezialbehandlung</span>
+                        </div>
+                        <h3>Kryolipolyse</h3>
+                        <p>
+                            Modernste Körperformung durch gezielte Kälte.
+                            Nicht-invasiv, klinisch geprüft und effektiv.
+                            <span class="price-line">Ab 99 € · 1 Zone · 179 € · 2 Zonen</span>
+                        </p>
+                        <div class="service-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal-up" data-tilt style="--d:.25s">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
+                                <path d="M14 14c10 0 16 8 20 20M14 14c0 10 8 16 20 20M14 14l20 20"/>
+                                <circle cx="14" cy="14" r="2"/>
+                                <circle cx="34" cy="34" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="service-meta">
+                            <span>06</span><span>Präzision</span>
+                        </div>
+                        <h3>Fußreflexzonen</h3>
+                        <p>
+                            Über die Füße den ganzen Körper erreichen.
+                            Gezielter Druck auf Reflexpunkte harmonisiert
+                            Organe und Systeme auf sanfte Weise.
+                        </p>
+                        <div class="service-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal-up" data-tilt style="--d:.3s">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
+                                <path d="M10 24c0-8 6-14 14-14s14 6 14 14"/>
+                                <path d="M10 24c0 8 6 14 14 14s14-6 14-14"/>
+                                <path d="M14 24h20M19 19l10 10M19 29l10-10"/>
+                            </svg>
+                        </div>
+                        <div class="service-meta">
+                            <span>07</span><span>Entgiftung</span>
+                        </div>
+                        <h3>Lymphdrainage</h3>
+                        <p>
+                            Sanfte, rhythmische Technik zur Aktivierung
+                            des Lymphsystems. Reduziert Schwellungen,
+                            stärkt das Immunsystem und entgiftet.
+                        </p>
+                        <div class="service-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal-up" data-tilt style="--d:.35s">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
+                                <circle cx="16" cy="24" r="6"/>
+                                <circle cx="32" cy="24" r="6"/>
+                                <circle cx="24" cy="14" r="4"/>
+                                <circle cx="24" cy="34" r="4"/>
+                            </svg>
+                        </div>
+                        <div class="service-meta">
+                            <span>08</span><span>Tradition</span>
+                        </div>
+                        <h3>Schröpfen</h3>
+                        <p>
+                            Traditionelles und chinesisches Schröpfen.
+                            Löst hartnäckige Verspannungen, verbessert
+                            die Durchblutung und aktiviert Selbstheilung.
+                        </p>
+                        <div class="service-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </article>
+
+                    <article class="service-card reveal-up" data-tilt style="--d:.4s">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
+                                <path d="M8 24h8l4-12 8 24 4-12h8"/>
+                            </svg>
+                        </div>
+                        <div class="service-meta">
+                            <span>09</span><span>Technologie</span>
+                        </div>
+                        <h3>Kaltlaser & Ultraschall</h3>
+                        <p>
+                            Modernste Gerätetechnik zur Schmerztherapie,
+                            Zellregeneration und zur Behandlung chronischer
+                            Beschwerden auf sanfte Weise.
+                        </p>
+                        <div class="service-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="services-footer reveal">
+                    <p>
+                        <em>+ Sotai Ho · Magnettherapie · Radiofrequenz · Pressotherapie · Anti-Cellulite · Fettreduktion</em>
+                    </p>
+                    <a href="#contact" class="btn btn-ghost" data-magnetic>
+                        <span>Vollständiges Angebot erfragen</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M13 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFITS -->
+        <section class="section benefits" id="benefits">
+            <div class="container">
+                <div class="benefits-header">
+                    <span class="eyebrow reveal">04 · Werte</span>
+                    <h2 class="section-title reveal">
+                        Warum Kiroshiatsu.
+                    </h2>
+                </div>
+
+                <div class="benefits-grid">
+                    <article class="benefit reveal-up">
+                        <div class="benefit-num">01</div>
+                        <h3>Echte Expertise</h3>
+                        <p>
+                            Über 25 Jahre Praxiserfahrung als diplomierter
+                            Chiromasseur. Fundiertes Wissen, kontinuierliche
+                            Weiterbildung und nachgewiesene Ergebnisse.
+                        </p>
+                    </article>
+
+                    <article class="benefit reveal-up" style="--d:.1s">
+                        <div class="benefit-num">02</div>
+                        <h3>Ost trifft West</h3>
+                        <p>
+                            Die seltene Verbindung aus westlicher Anatomie
+                            und östlicher Meridian-Lehre. Eine ganzheitliche
+                            Sichtweise, die beide Seiten würdigt.
+                        </p>
+                    </article>
+
+                    <article class="benefit reveal-up" style="--d:.2s">
+                        <div class="benefit-num">03</div>
+                        <h3>Maßgeschneidert</h3>
+                        <p>
+                            Keine Standardprotokolle. Jede Behandlung wird
+                            auf Ihren Körper, Ihre Geschichte und Ihre Ziele
+                            individuell abgestimmt.
+                        </p>
+                    </article>
+
+                    <article class="benefit reveal-up" style="--d:.3s">
+                        <div class="benefit-num">04</div>
+                        <h3>Diskreter Raum</h3>
+                        <p>
+                            Eine geschützte, ruhige Umgebung ohne Zeitdruck.
+                            Hier geht es nicht um Termine — hier geht es um
+                            Sie und Ihr Wohlbefinden.
+                        </p>
+                    </article>
+
+                    <article class="benefit reveal-up" style="--d:.4s">
+                        <div class="benefit-num">05</div>
+                        <h3>Heilbehandlung</h3>
+                        <p>
+                            Behandlungen können mit Privatrezept als
+                            medizinische Heilbehandlung durchgeführt
+                            werden — rechtlich anerkannt und qualifiziert.
+                        </p>
+                    </article>
+
+                    <article class="benefit reveal-up" style="--d:.5s">
+                        <div class="benefit-num">06</div>
+                        <h3>Nachhaltige Wirkung</h3>
+                        <p>
+                            Wir arbeiten nicht nur an Symptomen. Unser Ziel:
+                            langfristige Veränderung, Selbstwahrnehmung und
+                            dauerhaftes Gleichgewicht.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="section testimonials" id="testimonials">
+            <div class="container">
+                <div class="test-header">
+                    <span class="eyebrow reveal">05 · Stimmen</span>
+                    <h2 class="section-title reveal">
+                        Vertrauen, das <em>spürbar</em> ist.
+                    </h2>
+                </div>
+
+                <div class="test-grid">
+                    <figure class="test-card reveal-up">
+                        <div class="test-stars">★★★★★</div>
+                        <blockquote>
+                            Ich bin seit über drei Jahren Patientin bei
+                            Victor — und seitdem habe ich meine
+                            jahrelangen Rückenschmerzen vergessen.
+                            Außergewöhnliches Fachwissen, herzliche Art.
+                        </blockquote>
+                        <figcaption>
+                            <strong>Claudia M.</strong>
+                            <span>Bielefeld</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="test-card reveal-up" style="--d:.1s">
+                        <div class="test-stars">★★★★★</div>
+                        <blockquote>
+                            Die Kombination aus Shiatsu und Chiromassage
+                            ist einzigartig. Man spürt nach der ersten
+                            Sitzung, dass hier ein wahrer Meister
+                            seines Fachs arbeitet.
+                        </blockquote>
+                        <figcaption>
+                            <strong>Markus R.</strong>
+                            <span>Triathlet · Osnabrück</span>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="test-card reveal-up" style="--d:.2s">
+                        <div class="test-stars">★★★★★</div>
+                        <blockquote>
+                            Ruhe, Würde und echte Kompetenz. Ein Ort, der
+                            nicht mit der Zeit, sondern mit dem Menschen
+                            arbeitet. Absolute Empfehlung — ohne
+                            Einschränkung.
+                        </blockquote>
+                        <figcaption>
+                            <strong>Elena S.</strong>
+                            <span>Gütersloh</span>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div class="test-trust reveal">
+                    <div class="trust-item">
+                        <span class="trust-num">4.9</span>
+                        <div class="trust-stars">★★★★★</div>
+                        <span class="trust-label">Bewertung</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-num">500+</span>
+                        <span class="trust-label">Zufriedene Patienten</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-num">12+</span>
+                        <span class="trust-label">Jahre in Bielefeld</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <div class="contact-header">
+                    <span class="eyebrow reveal">06 · Kontakt</span>
+                    <h2 class="section-title reveal">
+                        Bereit für Ihren<br/>
+                        ersten <em>Schritt</em>?
+                    </h2>
+                    <p class="section-intro reveal">
+                        Vereinbaren Sie Ihr Erstgespräch — 40 €, das auf
+                        zukünftige Behandlungen angerechnet wird. Wir nehmen
+                        uns Zeit für Sie.
+                    </p>
+                </div>
+
+                <div class="contact-layout">
+                    <div class="contact-info reveal">
+                        <div class="info-block">
+                            <span class="info-label">Praxis</span>
+                            <p>Detmolder Str. 429<br/>33605 Bielefeld · Stieghorst</p>
+                        </div>
+
+                        <div class="info-block">
+                            <span class="info-label">Telefon</span>
+                            <a href="tel:+4952197174457" class="info-link">+49 521 97174457</a>
+                        </div>
+
+                        <div class="info-block">
+                            <span class="info-label">E-Mail</span>
+                            <a href="mailto:info@kiroshiatsu.de" class="info-link">info@kiroshiatsu.de</a>
+                        </div>
+
+                        <div class="info-block">
+                            <span class="info-label">Öffnungszeiten</span>
+                            <p>Montag – Freitag<br/>11:00 – 19:00 Uhr</p>
+                        </div>
+
+                        <div class="info-block">
+                            <span class="info-label">Erstberatung</span>
+                            <p>40 € — vollständig anrechenbar auf Folgebehandlungen</p>
+                        </div>
+
+                        <div class="contact-social">
+                            <a href="#" aria-label="Instagram">Instagram</a>
+                            <a href="#" aria-label="Facebook">Facebook</a>
+                            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form reveal" id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required autocomplete="name" />
+                                <span class="form-error"></span>
+                            </div>
+                            <div class="form-field">
+                                <label for="email">E-Mail</label>
+                                <input type="email" id="email" name="email" required autocomplete="email" />
+                                <span class="form-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="phone">Telefon (optional)</label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" />
+                        </div>
+
+                        <div class="form-field">
+                            <label for="service">Gewünschte Behandlung</label>
+                            <select id="service" name="service">
+                                <option value="">Bitte wählen</option>
+                                <option>Shiatsu</option>
+                                <option>Tuina</option>
+                                <option>Chiromassage</option>
+                                <option>Wellness-Massage</option>
+                                <option>Sport-Massage</option>
+                                <option>Kryolipolyse</option>
+                                <option>Fußreflexzonen</option>
+                                <option>Lymphdrainage</option>
+                                <option>Schröpfen</option>
+                                <option>Erstberatung</option>
+                                <option>Sonstiges</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="message">Ihre Nachricht</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <span class="form-error"></span>
+                        </div>
+
+                        <div class="form-field checkbox">
+                            <input type="checkbox" id="consent" required />
+                            <label for="consent">Ich habe die Datenschutzhinweise gelesen und akzeptiere sie.</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full" data-magnetic>
+                            <span>Anfrage senden</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+
+                        <div class="form-feedback" id="formFeedback"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAP / CTA BAND -->
+        <section class="cta-band">
+            <div class="container">
+                <div class="cta-inner reveal">
+                    <div>
+                        <span class="eyebrow">Besuchen Sie uns</span>
+                        <h3>Detmolder Str. 429 · 33605 Bielefeld</h3>
+                    </div>
+                    <a href="https://maps.google.com/?q=Detmolder+Str+429+33605+Bielefeld" target="_blank" rel="noopener" class="btn btn-primary" data-magnetic>
+                        <span>Route planen</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M13 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-logo">Ki<em>ro</em>shiatsu</span>
+                    <p>
+                        Ganzheitliche Körperarbeit von Victor A. Koldobsky.
+                        Bielefeld · seit 2013.
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <span class="footer-label">Praxis</span>
+                    <a href="#about">Über mich</a>
+                    <a href="#method">Methode</a>
+                    <a href="#services">Behandlungen</a>
+                    <a href="#benefits">Werte</a>
+                </div>
+
+                <div class="footer-col">
+                    <span class="footer-label">Kontakt</span>
+                    <a href="tel:+4952197174457">+49 521 97174457</a>
+                    <a href="mailto:info@kiroshiatsu.de">info@kiroshiatsu.de</a>
+                    <a href="https://maps.google.com/?q=Detmolder+Str+429+33605+Bielefeld" target="_blank" rel="noopener">Detmolder Str. 429</a>
+                </div>
+
+                <div class="footer-col">
+                    <span class="footer-label">Rechtliches</span>
+                    <a href="#">Impressum</a>
+                    <a href="#">Datenschutz</a>
+                    <a href="#">AGB</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© <span id="year"></span> Kiroshiatsu · Victor A. Koldobsky</span>
+                <span class="footer-made">Hergestellt mit Ruhe in Bielefeld</span>
+            </div>
+        </div>
+
+        <div class="footer-bigmark" aria-hidden="true">KIROSHIATSU</div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/4952197174457" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp" data-magnetic>
+        <svg viewBox="0 0 32 32" fill="currentColor" width="26" height="26">
+            <path d="M16.004 2.667C8.643 2.667 2.671 8.64 2.671 16c0 2.67.78 5.155 2.116 7.25L2.667 29.333l6.24-2.073a13.25 13.25 0 0 0 7.097 2.073h.006c7.36 0 13.333-5.972 13.333-13.333 0-3.563-1.387-6.91-3.905-9.427a13.237 13.237 0 0 0-9.434-3.906Zm0 2.666c2.849 0 5.525 1.11 7.542 3.126A10.604 10.604 0 0 1 26.671 16c0 5.889-4.782 10.667-10.667 10.667h-.005a10.593 10.593 0 0 1-5.422-1.485l-.389-.231-3.704 1.228 1.238-3.613-.252-.402A10.604 10.604 0 0 1 5.337 16c0-5.889 4.779-10.667 10.667-10.667Zm-5.98 6.027c-.287 0-.75.106-1.144.534-.394.427-1.504 1.47-1.504 3.587s1.543 4.16 1.757 4.448c.213.288 2.999 4.8 7.386 6.538 3.643 1.444 4.385 1.158 5.178 1.086.793-.07 2.554-1.042 2.915-2.05.36-1.008.36-1.873.252-2.052-.107-.178-.395-.285-.827-.498-.433-.213-2.555-1.262-2.953-1.405-.397-.143-.688-.214-.977.215-.29.427-1.12 1.403-1.374 1.692-.254.29-.507.325-.94.113-.433-.214-1.827-.674-3.482-2.147-1.287-1.146-2.156-2.56-2.41-2.99-.253-.427-.026-.658.188-.87.194-.191.432-.498.648-.747.216-.25.287-.427.432-.712.143-.285.07-.534-.035-.747-.107-.213-.94-2.337-1.32-3.192-.338-.77-.687-.672-.94-.683l-.792-.014Z"/>
+        </svg>
+        <span class="wa-tooltip">Schreiben Sie uns</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
