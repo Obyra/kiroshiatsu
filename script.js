@@ -129,42 +129,9 @@
     counters.forEach(c => countIO.observe(c));
 
     /* -----------------------------------------------------
-       Custom cursor (desktop)
-       ----------------------------------------------------- */
-    const hasFinePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
-    if (hasFinePointer && !prefersReducedMotion) {
-        const dot = qs('#cursorDot');
-        const ring = qs('#cursorRing');
-
-        let dotX = 0, dotY = 0, ringX = 0, ringY = 0, mouseX = 0, mouseY = 0;
-
-        window.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX; mouseY = e.clientY;
-            if (!document.body.classList.contains('cursor-ready')) {
-                document.body.classList.add('cursor-ready');
-            }
-        });
-
-        const render = () => {
-            dotX += (mouseX - dotX) * 0.5;
-            dotY += (mouseY - dotY) * 0.5;
-            ringX += (mouseX - ringX) * 0.15;
-            ringY += (mouseY - ringY) * 0.15;
-            if (dot) dot.style.transform = `translate(${dotX}px, ${dotY}px) translate(-50%, -50%)`;
-            if (ring) ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
-            requestAnimationFrame(render);
-        };
-        render();
-
-        qsa('a, button, [data-magnetic], .service-card, .test-card').forEach(el => {
-            el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
-            el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
-        });
-    }
-
-    /* -----------------------------------------------------
        Magnetic buttons
        ----------------------------------------------------- */
+    const hasFinePointer = matchMedia('(hover: hover) and (pointer: fine)').matches;
     if (hasFinePointer && !prefersReducedMotion) {
         qsa('[data-magnetic]').forEach(el => {
             const strength = 18;
@@ -282,6 +249,174 @@
        ----------------------------------------------------- */
     window.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && mobileMenu?.classList.contains('open')) closeMenu();
+    });
+
+    /* -----------------------------------------------------
+       Ihre Meinung — review form (star rating + WhatsApp/email send)
+       ----------------------------------------------------- */
+    const starRating = qs('#starRating');
+    const starsInput = qs('#meinungStars');
+    const meinungForm = qs('#meinungForm');
+    const meinungFeedback = qs('#meinungFeedback');
+
+    if (starRating && starsInput) {
+        const stars = qsa('.star', starRating);
+        let current = parseInt(starsInput.value, 10) || 5;
+
+        const paint = (val) => {
+            stars.forEach(s => {
+                const v = parseInt(s.dataset.value, 10);
+                s.classList.toggle('active', v <= val);
+            });
+        };
+        paint(current);
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                current = parseInt(star.dataset.value, 10);
+                starsInput.value = current;
+                paint(current);
+            });
+            star.addEventListener('mouseenter', () => paint(parseInt(star.dataset.value, 10)));
+        });
+        starRating.addEventListener('mouseleave', () => paint(current));
+    }
+
+    if (meinungForm) {
+        const PHONE_WA = '4917647115700';
+        const EMAIL = 'info@kiroshiatsu.de';
+
+        let sendVia = 'whatsapp';
+        qsa('[data-send]', meinungForm).forEach(btn => {
+            btn.addEventListener('click', () => { sendVia = btn.dataset.send; });
+        });
+
+        meinungForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = qs('#meinungName')?.value.trim() || '';
+            const city = qs('#meinungCity')?.value.trim() || '';
+            const text = qs('#meinungText')?.value.trim() || '';
+            const stars = parseInt(starsInput?.value, 10) || 5;
+
+            if (!name || !text) {
+                if (meinungFeedback) {
+                    meinungFeedback.textContent = 'Bitte füllen Sie Name und Erfahrung aus.';
+                    meinungFeedback.className = 'meinung-feedback error';
+                }
+                return;
+            }
+
+            const starString = '★'.repeat(stars) + '☆'.repeat(5 - stars);
+            const locationLine = city ? `Ort: ${city}\n` : '';
+
+            if (sendVia === 'email') {
+                const subject = encodeURIComponent(`Meine Meinung zu KiroShiatsu® — ${name}`);
+                const body = encodeURIComponent(
+                    `Hallo Victor,\n\nhier ist meine Meinung zu meiner Behandlung:\n\n` +
+                    `Name: ${name}\n${locationLine}Bewertung: ${starString} (${stars}/5)\n\n` +
+                    `Erfahrung:\n${text}\n\nViele Grüße`
+                );
+                window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+            } else {
+                const msg = encodeURIComponent(
+                    `Hallo Victor, hier ist meine Meinung zu KiroShiatsu®:\n\n` +
+                    `Name: ${name}\n${locationLine}Bewertung: ${starString} (${stars}/5)\n\n` +
+                    `Erfahrung:\n${text}`
+                );
+                window.open(`https://wa.me/${PHONE_WA}?text=${msg}`, '_blank', 'noopener');
+            }
+
+            if (meinungFeedback) {
+                meinungFeedback.textContent = 'Danke! Ihre Meinung wurde vorbereitet — senden Sie sie einfach ab.';
+                meinungFeedback.className = 'meinung-feedback';
+            }
+        });
+    }
+
+    /* -----------------------------------------------------
+       Therapy modal — detail view on card click
+       ----------------------------------------------------- */
+    const therapyModal = qs('#therapyModal');
+    const therapyModalBody = qs('#therapyModalBody');
+
+    const openTherapyModal = (card) => {
+        if (!therapyModal || !therapyModalBody) return;
+        const detail = card.querySelector('.therapy-detail');
+        if (!detail) return;
+
+        therapyModalBody.innerHTML = detail.innerHTML;
+        therapyModal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('modal-open');
+
+        const scrollArea = qs('.therapy-modal-scroll');
+        if (scrollArea) scrollArea.scrollTop = 0;
+    };
+
+    const closeTherapyModal = () => {
+        if (!therapyModal) return;
+        therapyModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+        setTimeout(() => {
+            if (therapyModalBody) therapyModalBody.innerHTML = '';
+        }, 500);
+    };
+
+    qsa('.service-card[data-therapy]').forEach(card => {
+        card.addEventListener('click', (e) => {
+            // Don't trigger if user clicked on a link/button inside
+            if (e.target.closest('a, button')) return;
+            openTherapyModal(card);
+        });
+    });
+
+    if (therapyModal) {
+        therapyModal.addEventListener('click', (e) => {
+            if (e.target.closest('[data-close]')) closeTherapyModal();
+        });
+    }
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && therapyModal?.getAttribute('aria-hidden') === 'false') {
+            closeTherapyModal();
+        }
+    });
+
+    /* -----------------------------------------------------
+       Journey carousel — auto-play + dots
+       ----------------------------------------------------- */
+    qsa('[data-carousel]').forEach((root, idx) => {
+        const imgs = Array.from(root.querySelectorAll('img'));
+        const dots = Array.from(root.querySelectorAll('.journey-dot'));
+        if (imgs.length < 2) return;
+
+        let current = 0;
+        let timer = null;
+        const INTERVAL = 4200;
+
+        const go = (next) => {
+            if (next === current) return;
+            imgs[current]?.classList.remove('active');
+            dots[current]?.classList.remove('active');
+            current = (next + imgs.length) % imgs.length;
+            imgs[current]?.classList.add('active');
+            dots[current]?.classList.add('active');
+        };
+
+        const play = () => {
+            stop();
+            timer = setInterval(() => go(current + 1), INTERVAL);
+        };
+        const stop = () => { if (timer) { clearInterval(timer); timer = null; } };
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => { go(i); play(); });
+        });
+
+        root.addEventListener('mouseenter', stop);
+        root.addEventListener('mouseleave', play);
+
+        // Stagger start so cards don't pulse in sync
+        setTimeout(play, idx * 900);
     });
 
 })();

@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Kiroshiatsu — Massagepraxis von Victor A. Koldobsky in Bielefeld. Über 25 Jahre Erfahrung in Shiatsu, Chiromassage, Tuina und ganzheitlicher Körperarbeit." />
-    <meta name="theme-color" content="#0A0A0A" />
-    <title>Kiroshiatsu — Massagepraxis Victor A. Koldobsky · Bielefeld</title>
+    <meta name="description" content="KiroShiatsu® — Therapeutische Massage zur Schmerzlinderung in Bielefeld. Gezielte Hilfe bei Rücken-, Nacken- und muskulären Beschwerden. Victor A. Koldobsky · Diplomierter Chiromasseur." />
+    <meta name="theme-color" content="#2C2A26" />
+    <title>KiroShiatsu® — Therapeutische Massage · Victor A. Koldobsky · Bielefeld</title>
 
+    <link rel="icon" type="image/png" href="images/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -17,38 +18,64 @@
     <!-- Loader -->
     <div class="loader" id="loader">
         <div class="loader-inner">
-            <span class="loader-word">KI</span>
-            <span class="loader-word">RO</span>
+            <span class="loader-word">KIRO</span>
             <span class="loader-word">SHIATSU</span>
+            <span class="loader-word">®</span>
         </div>
     </div>
+
+    <!-- SVG filter: removes white background from logo PNG -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <filter id="logo-clean" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                -2 -2 -2 3 0"/>
+        </filter>
+    </svg>
+
+    <!-- SVG filters: clean logo background -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <filter id="logo-clean" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                -2 -2 -2 3 0"/>
+        </filter>
+        <filter id="logo-soft" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                -0.65 -0.65 -0.65 2.1 0"/>
+        </filter>
+    </svg>
 
     <!-- Progress Bar -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
-    <!-- Cursor (desktop only) -->
-    <div class="cursor-dot" id="cursorDot"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
-
     <!-- Navbar -->
     <header class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#top" class="nav-logo" data-magnetic>
-                <span class="logo-mark">Ki</span>
-                <span class="logo-text">roshiatsu</span>
+            <a href="#top" class="nav-logo" data-magnetic aria-label="KiroShiatsu — Startseite">
+                <img src="images/logo.png" alt="KiroShiatsu®" class="nav-logo-img" />
             </a>
 
             <nav class="nav-links" id="navLinks">
                 <a href="#about" class="nav-link">Über mich</a>
                 <a href="#method" class="nav-link">Methode</a>
-                <a href="#services" class="nav-link">Behandlungen</a>
-                <a href="#benefits" class="nav-link">Werte</a>
+                <a href="#services" class="nav-link">Therapien</a>
+                <a href="#beschwerden" class="nav-link">Beschwerden</a>
+                <a href="#aesthetik" class="nav-link">Ästhetik</a>
                 <a href="#testimonials" class="nav-link">Stimmen</a>
+                <a href="#kontraindikationen" class="nav-link">Kontra</a>
                 <a href="#contact" class="nav-link">Kontakt</a>
             </nav>
 
-            <a href="#contact" class="nav-cta" data-magnetic>
-                <span>Termin buchen</span>
+            <a href="https://wa.me/4917647115700?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener" class="nav-cta" data-magnetic>
+                <span>Termin vereinbaren</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M13 5l7 7-7 7"/>
                 </svg>
@@ -66,13 +93,16 @@
         <nav class="mobile-menu-links">
             <a href="#about">Über mich</a>
             <a href="#method">Methode</a>
-            <a href="#services">Behandlungen</a>
-            <a href="#benefits">Werte</a>
+            <a href="#services">Therapien</a>
+            <a href="#beschwerden">Beschwerden</a>
+            <a href="#aesthetik">Ästhetische Massage</a>
             <a href="#testimonials">Stimmen</a>
+            <a href="#kontraindikationen">Kontraindikationen</a>
             <a href="#contact">Kontakt</a>
         </nav>
         <div class="mobile-menu-footer">
-            <a href="tel:+4952197174457">+49 521 97174457</a>
+            <a href="tel:+4952197174457">Festnetz: +49 521 97174457</a>
+            <a href="https://wa.me/4917647115700?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener">WhatsApp: +49 176 47115700</a>
             <a href="mailto:info@kiroshiatsu.de">info@kiroshiatsu.de</a>
         </div>
     </div>
@@ -93,38 +123,39 @@
                 </div>
 
                 <h1 class="hero-title">
-                    <span class="line reveal-stagger"><span>Die Kunst</span></span>
-                    <span class="line reveal-stagger"><span>der <em>ganzheitlichen</em></span></span>
-                    <span class="line reveal-stagger"><span>Heilung.</span></span>
+                    <span class="line reveal-stagger"><span>Therapeutische</span></span>
+                    <span class="line reveal-stagger"><span>Massage zur</span></span>
+                    <span class="line reveal-stagger"><span><em>Schmerzlinderung</em>.</span></span>
                 </h1>
 
                 <p class="hero-subtitle reveal">
-                    Über 25 Jahre Erfahrung verbunden mit westlicher Präzision
-                    und östlicher Weisheit. Jede Behandlung — ein Ritual
-                    für Körper, Geist und Balance.
+                    Gezielte Hilfe bei Schmerzen und Verspannungen. Bei Rücken-,
+                    Nacken- und muskulären Beschwerden. Wenn klassische Massagen
+                    nicht mehr helfen — hier beginnt die gezielte Arbeit an
+                    der Ursache.
                 </p>
 
                 <div class="hero-actions reveal">
-                    <a href="#contact" class="btn btn-primary" data-magnetic>
-                        <span>Erstgespräch vereinbaren</span>
+                    <a href="https://wa.me/4917647115700?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener" class="btn btn-primary" data-magnetic>
+                        <span>Termin vereinbaren</span>
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M13 5l7 7-7 7"/>
                         </svg>
                     </a>
-                    <a href="#services" class="btn btn-ghost" data-magnetic>
-                        <span>Behandlungen entdecken</span>
+                    <a href="#method" class="btn btn-ghost" data-magnetic>
+                        <span>Methode entdecken</span>
                     </a>
                 </div>
 
                 <div class="hero-stats reveal">
                     <div class="stat">
-                        <span class="stat-num" data-count="25">0</span><span class="stat-plus">+</span>
+                        <span class="stat-num" data-count="35">0</span><span class="stat-plus">+</span>
                         <span class="stat-label">Jahre Erfahrung</span>
                     </div>
                     <div class="stat-sep"></div>
                     <div class="stat">
-                        <span class="stat-num" data-count="30">0</span><span class="stat-plus">+</span>
-                        <span class="stat-label">Behandlungsarten</span>
+                        <span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Therapieformen</span>
                     </div>
                     <div class="stat-sep"></div>
                     <div class="stat">
@@ -147,22 +178,20 @@
         <!-- MARQUEE -->
         <section class="marquee" aria-hidden="true">
             <div class="marquee-track">
+                <span>Sportmassage</span><em>◆</em>
                 <span>Shiatsu</span><em>◆</em>
-                <span>Chiromassage</span><em>◆</em>
-                <span>Tuina</span><em>◆</em>
-                <span>Sotai Ho</span><em>◆</em>
                 <span>Lymphdrainage</span><em>◆</em>
-                <span>Kryolipolyse</span><em>◆</em>
-                <span>Fußreflex</span><em>◆</em>
-                <span>Schröpfen</span><em>◆</em>
+                <span>Fußreflexzonen</span><em>◆</em>
+                <span>Tui Na</span><em>◆</em>
+                <span>Ohrakupunktur</span><em>◆</em>
+                <span>KiroShiatsu®</span><em>◆</em>
+                <span>Sportmassage</span><em>◆</em>
                 <span>Shiatsu</span><em>◆</em>
-                <span>Chiromassage</span><em>◆</em>
-                <span>Tuina</span><em>◆</em>
-                <span>Sotai Ho</span><em>◆</em>
                 <span>Lymphdrainage</span><em>◆</em>
-                <span>Kryolipolyse</span><em>◆</em>
-                <span>Fußreflex</span><em>◆</em>
-                <span>Schröpfen</span><em>◆</em>
+                <span>Fußreflexzonen</span><em>◆</em>
+                <span>Tui Na</span><em>◆</em>
+                <span>Ohrakupunktur</span><em>◆</em>
+                <span>KiroShiatsu®</span><em>◆</em>
             </div>
         </section>
 
@@ -172,11 +201,9 @@
                 <div class="col-visual reveal-parallax">
                     <div class="visual-frame">
                         <div class="visual-inner">
-                            <div class="portrait-placeholder">
-                                <span class="portrait-initials">VK</span>
-                                <div class="portrait-ring"></div>
-                                <div class="portrait-ring ring-2"></div>
-                            </div>
+                            <img src="images/victor.png" alt="Victor A. Koldobsky — Diplomierter Chiromasseur" class="portrait-photo" />
+                            <div class="portrait-ring"></div>
+                            <div class="portrait-ring ring-2"></div>
                         </div>
                         <div class="visual-caption">
                             <span>Victor A. Koldobsky</span>
@@ -188,41 +215,103 @@
                 <div class="col-text">
                     <span class="eyebrow reveal">01 · Über mich</span>
                     <h2 class="section-title reveal">
-                        Zwei Welten. <em>Eine</em> Methode.
+                        Seit <em>35 Jahren</em> im Dienste des Körpers.
                     </h2>
                     <p class="lead reveal">
-                        Victor A. Koldobsky vereint in seiner Praxis das Beste
-                        aus westlicher Chiromassage und östlicher Heilkunst —
-                        eine Synthese, die er über mehr als zwei Jahrzehnte
-                        verfeinert hat.
+                        <strong>KiroShiatsu®</strong> ist eine eigens entwickelte manuelle
+                        Methode zur gezielten Schmerzlinderung und Behandlung
+                        muskulärer Blockaden. Sie basiert auf präzisen
+                        Grifftechniken aus der therapeutischen Körperarbeit.
                     </p>
                     <p class="body reveal">
-                        Geboren in Argentinien, geschult auf Lanzarote und
-                        seit über zwölf Jahren in Bielefeld, praktiziert er
-                        eine Form der Körperarbeit, die Tradition, Anatomie
-                        und Intuition in Einklang bringt. Jede Sitzung ist
-                        präzise, individuell und auf den Menschen abgestimmt.
+                        Anders als bei herkömmlichen Massagen arbeite ich nicht
+                        oberflächlich — ich suche die Ursache der Beschwerden
+                        und behandle sie gezielt. Jede Anwendung wird
+                        individuell angepasst, je nach Beschwerde, Organismus
+                        und Situation. Meine Arbeit basiert nicht auf
+                        Standardtechniken, sondern auf Erfahrung, Präzision
+                        und Körperkenntnis.
                     </p>
 
                     <ul class="about-facts reveal">
                         <li>
-                            <span class="fact-num">25+</span>
-                            <span class="fact-label">Jahre in Europa tätig als offizieller Chiromasseur</span>
+                            <span class="fact-num">35+</span>
+                            <span class="fact-label">Jahre Erfahrung in therapeutischer Körperarbeit</span>
                         </li>
                         <li>
-                            <span class="fact-num">30+</span>
-                            <span class="fact-label">Spezielle Wellness- und Therapieformen im Angebot</span>
+                            <span class="fact-num">®</span>
+                            <span class="fact-label">KiroShiatsu — eingetragene eigene Methode</span>
                         </li>
                         <li>
                             <span class="fact-num">∞</span>
-                            <span class="fact-label">Begleitung auf dem Weg zu nachhaltigem Wohlbefinden</span>
+                            <span class="fact-label">Individuelle Behandlung — kein Standardprotokoll</span>
                         </li>
                     </ul>
 
                     <div class="signature reveal">
                         <span class="sig-text">V. Koldobsky</span>
-                        <small>Gründer · Kiroshiatsu</small>
+                        <small>Diplomierter Chiromasseur</small>
                     </div>
+                </div>
+            </div>
+
+            <!-- Journey: Argentina -> Lanzarote -> Bielefeld -->
+            <div class="container journey">
+                <div class="journey-header reveal">
+                    <span class="journey-eyebrow">Mein Weg</span>
+                    <h3 class="journey-title">Drei Welten — <em>eine</em> Berufung.</h3>
+                </div>
+
+                <div class="journey-grid">
+                    <article class="journey-card reveal-up">
+                        <div class="journey-image" data-carousel>
+                            <img src="images/journey/argentina.jpg" alt="Obelisco, Buenos Aires" class="active" />
+                            <img src="images/journey/tango.jpg" alt="Tango argentino" />
+                            <div class="journey-dots">
+                                <span class="journey-dot active"></span>
+                                <span class="journey-dot"></span>
+                            </div>
+                        </div>
+                        <div class="journey-meta">
+                            <span class="journey-place">01 · Buenos Aires</span>
+                            <h4>Argentinien</h4>
+                            <p>Geboren in Argentinien — die Wurzeln einer leidenschaftlichen Körperarbeit, geprägt von Tradition und Intuition.</p>
+                        </div>
+                    </article>
+
+                    <article class="journey-card reveal-up" style="--d:.1s">
+                        <div class="journey-image" data-carousel>
+                            <img src="images/journey/lanzarote.jpg" alt="Lanzarote, Spanien" class="active" />
+                            <img src="images/journey/lanzarote-gerias.jpg" alt="Lanzarote, La Geria" />
+                            <img src="images/journey/lanzarote-sunset.jpg" alt="Sonnenuntergang in Lanzarote" />
+                            <div class="journey-dots">
+                                <span class="journey-dot active"></span>
+                                <span class="journey-dot"></span>
+                                <span class="journey-dot"></span>
+                            </div>
+                        </div>
+                        <div class="journey-meta">
+                            <span class="journey-place">02 · Lanzarote</span>
+                            <h4>Ausbildung</h4>
+                            <p>Auf den Kanarischen Inseln formte sich die Synthese aus westlicher Chiromassage und östlicher Heilkunst.</p>
+                        </div>
+                    </article>
+
+                    <article class="journey-card reveal-up" style="--d:.2s">
+                        <div class="journey-image" data-carousel>
+                            <img src="images/journey/bielefeld.jpg" alt="Bielefeld, Altstadt" class="active" />
+                            <img src="images/journey/sparrenburg.jpg" alt="Sparrenburg, Bielefeld" />
+                            <div class="journey-dots">
+                                <span class="journey-dot active"></span>
+                                <span class="journey-dot"></span>
+                            </div>
+                        </div>
+                        <div class="journey-meta">
+                            <span class="journey-place">03 · Bielefeld</span>
+                            <h4>Heute</h4>
+                            <p>Seit 2013 in Bielefeld — eine eigene Praxis, eine eigene Methode: KiroShiatsu®.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -233,56 +322,117 @@
                 <div class="method-header">
                     <span class="eyebrow reveal">02 · Die Methode</span>
                     <h2 class="section-title reveal">
-                        <em>Kiro-Shiatsu</em> — eine eigens <br/>entwickelte Kunst.
+                        <em>KiroShiatsu®</em> — So funktioniert<br/>die Anwendung.
                     </h2>
                 </div>
 
-                <div class="method-grid">
+                <div class="method-grid method-grid-3">
                     <article class="method-card reveal-up">
+                        <div class="method-media">
+                            <img src="images/method/analyse-1.jpg" class="active" alt="Analyse der funktionellen Spannung" />
+                        </div>
                         <span class="method-step">I</span>
-                        <h3>Anamnese</h3>
+                        <h3>Analyse der funktionellen Spannung</h3>
                         <p>
-                            Jede Behandlung beginnt mit einem vertraulichen
-                            Gespräch. Wir erfassen Ihre Geschichte, Ihre
-                            Beschwerden und Ihre Ziele — ganzheitlich und
-                            ohne Eile.
+                            Jede Behandlung beginnt mit einer gründlichen
+                            Analyse Ihrer funktionellen Spannungsmuster.
+                            Durch präzise Tastuntersuchung und Gespräch
+                            identifizieren wir Blockaden, Ungleichgewichte
+                            und deren Ursachen — ehrlich und transparent.
                         </p>
                         <div class="method-line"></div>
                     </article>
 
                     <article class="method-card reveal-up" style="--d:.1s">
+                        <div class="method-media">
+                            <img src="images/method/behandlung-1.jpg" class="active" alt="Manuelle Impulse und gerichtete Reflexe" />
+                        </div>
                         <span class="method-step">II</span>
-                        <h3>Diagnose</h3>
+                        <h3>Manuelle Impulse &amp; gerichtete Reflexe</h3>
                         <p>
-                            Durch präzise Tastuntersuchung, Meridian-Analyse
-                            und strukturelle Bewertung identifizieren wir
-                            Spannungsmuster, Blockaden und energetische
-                            Ungleichgewichte.
+                            Jede Anwendung wird individuell angepasst —
+                            keine Standardtechnik. KiroShiatsu® kombiniert
+                            präzise Grifftechniken mit Elementen aus Shiatsu,
+                            Tui Na, Lymphdrainage und Fußreflexzonen,
+                            um gezielt Impulse zu setzen.
                         </p>
                         <div class="method-line"></div>
                     </article>
 
                     <article class="method-card reveal-up" style="--d:.2s">
+                        <div class="method-media">
+                            <img src="images/method/wirkung-1.jpg" class="active" alt="Integration und Nachwirkung" />
+                        </div>
                         <span class="method-step">III</span>
-                        <h3>Behandlung</h3>
+                        <h3>Integration &amp; Nachwirkung</h3>
                         <p>
-                            Westliche Chiromassage trifft auf Shiatsu, Tuina,
-                            Sotai Ho und gezielte Techniken wie Schröpfen,
-                            Kaltlaser oder Lymphdrainage — exakt auf Sie
-                            zugeschnitten.
+                            Ich arbeite nicht oberflächlich, sondern suche
+                            die Ursache der Beschwerden. Ziel ist eine
+                            Integration der Behandlung in den Körper —
+                            nachhaltige Besserung und dauerhafte Veränderung
+                            statt kurzfristiger Entspannung.
                         </p>
                         <div class="method-line"></div>
                     </article>
+                </div>
+            </div>
+        </section>
 
-                    <article class="method-card reveal-up" style="--d:.3s">
-                        <span class="method-step">IV</span>
-                        <h3>Begleitung</h3>
+        <!-- WAS UNTERSCHEIDET -->
+        <section class="section distinguish" id="distinguish">
+            <div class="container">
+                <div class="distinguish-header">
+                    <span class="eyebrow reveal">03 · Was unterscheidet</span>
+                    <h2 class="section-title reveal">
+                        Was unterscheidet <em>KiroShiatsu®</em>?
+                    </h2>
+                </div>
+
+                <div class="distinguish-grid">
+                    <article class="distinguish-card reveal-up">
+                        <div class="distinguish-media">
+                            <img src="images/unterscheidet/integration.jpg" alt="" onerror="this.style.display='none'" />
+                            <span class="distinguish-monogram">一</span>
+                        </div>
+                        <span class="distinguish-label">01 · Integration</span>
+                        <h3>Integration</h3>
                         <p>
-                            Nachhaltige Veränderung braucht Kontinuität.
-                            Wir entwickeln einen Behandlungsplan, der Sie
-                            schrittweise zu langfristigem Wohlbefinden führt.
+                            In einer einzigen Sitzung werden verschiedene
+                            therapeutische Impulse miteinander verwoben —
+                            Shiatsu, Tui Na, Lymphdrainage und präzise
+                            Grifftechniken fließen zu einer einzigen,
+                            abgestimmten Behandlung zusammen.
                         </p>
-                        <div class="method-line"></div>
+                    </article>
+
+                    <article class="distinguish-card reveal-up" style="--d:.1s">
+                        <div class="distinguish-media">
+                            <img src="images/unterscheidet/praezision.jpg" alt="" onerror="this.style.display='none'" />
+                            <span class="distinguish-monogram">二</span>
+                        </div>
+                        <span class="distinguish-label">02 · Präzision</span>
+                        <h3>Präzision</h3>
+                        <p>
+                            Gezielte manuelle Arbeit ohne Standardprotokoll.
+                            Jede Anwendung folgt der Anatomie, den Meridianen
+                            und den spezifischen Bedürfnissen Ihres Körpers —
+                            nicht einem vorgefertigten Schema.
+                        </p>
+                    </article>
+
+                    <article class="distinguish-card reveal-up" style="--d:.2s">
+                        <div class="distinguish-media">
+                            <img src="images/unterscheidet/struktur.jpg" alt="" onerror="this.style.display='none'" />
+                            <span class="distinguish-monogram">三</span>
+                        </div>
+                        <span class="distinguish-label">03 · Struktur</span>
+                        <h3>Struktur</h3>
+                        <p>
+                            Ruhig, klar und reflektiert. Die Behandlung
+                            entfaltet sich in einer Atmosphäre von Gelassenheit
+                            und Konzentration — hier geht es nicht um
+                            Geschwindigkeit, sondern um Tiefe.
+                        </p>
                     </article>
                 </div>
             </div>
@@ -292,29 +442,84 @@
         <section class="section services" id="services">
             <div class="container">
                 <div class="services-header">
-                    <span class="eyebrow reveal">03 · Behandlungen</span>
+                    <span class="eyebrow reveal">04 · Therapien</span>
                     <h2 class="section-title reveal">
-                        Mehr als <em>30</em> spezielle<br/>
-                        Wellness- und Heilformen.
+                        Therapeutische <em>Behandlungen</em>.
                     </h2>
                     <p class="section-intro reveal">
-                        Eine kuratierte Auswahl unserer meistgefragten
-                        Behandlungen — alle individuell kombinierbar und
-                        optional als medizinische Heilbehandlung
-                        mit Privatrezept verfügbar.
+                        Eine Auswahl der therapeutischen Anwendungen, die ich
+                        individuell und in Kombination einsetze — für gezielte
+                        Schmerzlinderung und muskuläre Regeneration. Auch
+                        mit blauem Privatrezept von Ärzten oder Heilpraktikern
+                        möglich.
                     </p>
                 </div>
 
                 <div class="services-grid">
-                    <article class="service-card reveal-up" data-tilt>
-                        <div class="service-icon">
-                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
-                                <circle cx="24" cy="24" r="18"/>
-                                <path d="M24 6c6 8 6 28 0 36M24 6c-6 8-6 28 0 36M6 24h36"/>
+                    <article class="service-card has-image reveal-up" data-tilt data-therapy="sportmassage">
+                        <div class="service-image"><img src="images/therapies/sport.jpg" alt="Sportmassage" /></div>
+                        <div class="service-meta">
+                            <span>01</span><span>Performance</span>
+                        </div>
+                        <h3>Sportmassage</h3>
+                        <p>
+                            Gezielte Behandlung für Aktive und Athleten.
+                            Beschleunigt die Regeneration, beugt Verletzungen
+                            vor und optimiert die Leistungsfähigkeit.
+                        </p>
+                        <div class="service-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
                             </svg>
                         </div>
+                        <div class="therapy-detail" hidden>
+                            <img src="images/therapies/sport.jpg" class="detail-hero" alt="" />
+                            <div class="detail-content">
+                                <span class="detail-eyebrow">01 · Performance</span>
+                                <h2 id="therapyModalTitle">Sportmassage</h2>
+                                <p class="detail-lead">
+                                    Gezielte Behandlung für Athleten, Leistungssportler
+                                    und alle körperlich Aktiven — individuell an Sportart
+                                    und Trainingsphase angepasst.
+                                </p>
+                                <p>
+                                    Die Sportmassage ist kein Wellness-Ritual, sondern
+                                    gezielte Arbeit an der Muskulatur, Faszien und Gelenken.
+                                    Sie kombiniert tiefe Streichungen, Knetungen, Friktionen
+                                    und Dehnungen, um die körperliche Leistungsfähigkeit
+                                    zu unterstützen und Verletzungen vorzubeugen.
+                                </p>
+
+                                <h3>Drei Einsatzzeitpunkte</h3>
+                                <ul class="detail-list">
+                                    <li><strong>Vor dem Training</strong> — aktiviert die Muskulatur, bereitet optimal auf Belastung vor</li>
+                                    <li><strong>Nach dem Training</strong> — beschleunigt die Regeneration, löst Laktat, reduziert Muskelkater</li>
+                                    <li><strong>Bei Verletzungen</strong> — unterstützt die Rehabilitation, verkürzt die Heilungszeit</li>
+                                </ul>
+
+                                <h3>Wirkungen</h3>
+                                <ul class="detail-list">
+                                    <li>Beschleunigt die Muskelregeneration</li>
+                                    <li>Beugt Verletzungen und Überlastungen vor</li>
+                                    <li>Optimiert die Leistungsfähigkeit</li>
+                                    <li>Löst Muskelverhärtungen und Triggerpunkte</li>
+                                    <li>Verbessert Beweglichkeit und Flexibilität</li>
+                                    <li>Unterstützt die mentale Erholung</li>
+                                </ul>
+                                <div class="detail-cta">
+                                    <a href="https://wa.me/4917647115700?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener" class="btn btn-primary" data-close>
+                                        <span>Termin vereinbaren</span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="service-card has-image reveal-up" data-tilt style="--d:.05s" data-therapy="shiatsu">
+                        <div class="service-image"><img src="images/therapies/shiatsu.jpg" alt="Shiatsu" /></div>
                         <div class="service-meta">
-                            <span>01</span><span>Signature</span>
+                            <span>02</span><span>Tradition</span>
                         </div>
                         <h3>Shiatsu</h3>
                         <p>
@@ -327,19 +532,189 @@
                                 <path d="M5 12h14M13 5l7 7-7 7"/>
                             </svg>
                         </div>
+                        <div class="therapy-detail" hidden>
+                            <img src="images/therapies/shiatsu.jpg" class="detail-hero" alt="" />
+                            <div class="detail-content">
+                                <span class="detail-eyebrow">02 · Tradition Japan</span>
+                                <h2>Shiatsu</h2>
+                                <p class="detail-lead">
+                                    Japanische Druckpunkttechnik mit Wurzeln in der
+                                    Traditionellen Chinesischen Medizin — über 2000 Jahre alt.
+                                </p>
+                                <p>
+                                    Shiatsu (japanisch: „Fingerdruck") ist eine manuelle Technik,
+                                    bei der mit Daumen, Handflächen, gelegentlich Ellbogen und
+                                    Füßen präzise Druckpunkte entlang der <em>Meridiane</em> —
+                                    der Energieleitbahnen des Körpers — stimuliert werden. Ziel
+                                    ist es, den Fluss der Lebensenergie (Qi) zu regulieren und
+                                    das innere Gleichgewicht zwischen Yin und Yang
+                                    wiederherzustellen.
+                                </p>
+                                <p>
+                                    Die Behandlung erfolgt vollständig bekleidet auf einer Matte
+                                    oder Behandlungsliege. Shiatsu wirkt nicht nur körperlich,
+                                    sondern auch energetisch und emotional.
+                                </p>
+                                <h3>Wirkungen</h3>
+                                <ul class="detail-list">
+                                    <li>Löst tiefe Muskelverspannungen</li>
+                                    <li>Verbessert die Durchblutung</li>
+                                    <li>Reguliert das Nervensystem</li>
+                                    <li>Stärkt das Immunsystem</li>
+                                    <li>Harmonisiert den Energiefluss</li>
+                                    <li>Fördert tiefe Entspannung</li>
+                                </ul>
+                                <h3>Indikationen</h3>
+                                <p>
+                                    Stress, chronische Verspannungen, Schlafstörungen,
+                                    Erschöpfung, hormonelle Ungleichgewichte, Kopfschmerzen,
+                                    Verdauungsprobleme, energetische Blockaden.
+                                </p>
+                                <div class="detail-cta">
+                                    <a href="https://wa.me/4917647115700?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener" class="btn btn-primary" data-close>
+                                        <span>Termin vereinbaren</span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </article>
 
-                    <article class="service-card reveal-up" data-tilt style="--d:.05s">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
-                                <path d="M10 24c4-10 10-14 14-14s10 4 14 14-4 14-14 14-18-4-14-14Z"/>
-                                <path d="M18 24h12M24 18v12"/>
+                    <article class="service-card has-image reveal-up" data-tilt style="--d:.1s" data-therapy="lymphdrainage">
+                        <div class="service-image"><img src="images/therapies/lymph.jpg" alt="Manuelle Lymphdrainage" /></div>
+                        <div class="service-meta">
+                            <span>03</span><span>Entgiftung</span>
+                        </div>
+                        <h3>Manuelle Lymphdrainage</h3>
+                        <p>
+                            Sanfte, rhythmische Technik zur Aktivierung des
+                            Lymphsystems. Reduziert Schwellungen, stärkt das
+                            Immunsystem und fördert die Entgiftung.
+                        </p>
+                        <div class="service-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
                             </svg>
                         </div>
-                        <div class="service-meta">
-                            <span>02</span><span>Tradition</span>
+                        <div class="therapy-detail" hidden>
+                            <img src="images/therapies/lymph.jpg" class="detail-hero" alt="" />
+                            <div class="detail-content">
+                                <span class="detail-eyebrow">03 · Entgiftung · Methode Dr. Vodder</span>
+                                <h2>Manuelle Lymphdrainage</h2>
+                                <p class="detail-lead">
+                                    Sanfte, rhythmische Technik zur Aktivierung des
+                                    Lymphsystems — entwickelt nach der Methode
+                                    von Dr. Emil Vodder.
+                                </p>
+                                <p>
+                                    Das Lymphsystem ist das Entsorgungs- und Abwehrsystem
+                                    unseres Körpers. Bei Schwellungen, nach Operationen
+                                    oder bei chronischer Belastung kann der Lymphfluss
+                                    stagnieren. Die Manuelle Lymphdrainage regt mit
+                                    feinen, kreisenden Bewegungen den Lymphtransport
+                                    an — sanft, aber äußerst wirksam.
+                                </p>
+                                <h3>Hauptindikationen</h3>
+                                <ul class="detail-list">
+                                    <li>Postoperative Schwellungen</li>
+                                    <li>Lymphödeme (primär und sekundär)</li>
+                                    <li>Venöse Insuffizienz</li>
+                                    <li>Chronische Entzündungen</li>
+                                    <li>Prellungen und Hämatome</li>
+                                    <li>Cellulite</li>
+                                    <li>Wassereinlagerungen</li>
+                                </ul>
+                                <h3>Wirkungen</h3>
+                                <ul class="detail-list">
+                                    <li>Reduziert Schwellungen und Ödeme</li>
+                                    <li>Stärkt das Immunsystem</li>
+                                    <li>Fördert die Entgiftung</li>
+                                    <li>Beschleunigt die Wundheilung</li>
+                                    <li>Beruhigt das vegetative Nervensystem</li>
+                                    <li>Wirkt schmerzlindernd</li>
+                                </ul>
+                                <p class="detail-note">
+                                    <em>Mit Privatrezept auch als Heilbehandlung möglich.</em>
+                                </p>
+                                <div class="detail-cta">
+                                    <a href="https://wa.me/4917647115700?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener" class="btn btn-primary" data-close>
+                                        <span>Termin vereinbaren</span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <h3>Tuina</h3>
+                    </article>
+
+                    <article class="service-card has-image reveal-up" data-tilt style="--d:.2s" data-therapy="fussreflex">
+                        <div class="service-image"><img src="images/therapies/foot.jpg" alt="Fußreflexzonen" /></div>
+                        <div class="service-meta">
+                            <span>04</span><span>Präzision</span>
+                        </div>
+                        <h3>Fußreflexzonen</h3>
+                        <p>
+                            Über die Füße den ganzen Körper erreichen.
+                            Gezielter Druck auf Reflexpunkte harmonisiert
+                            Organe und Systeme auf sanfte, wirksame Weise.
+                        </p>
+                        <div class="service-arrow">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                        <div class="therapy-detail" hidden>
+                            <img src="images/therapies/foot.jpg" class="detail-hero" alt="" />
+                            <div class="detail-content">
+                                <span class="detail-eyebrow">04 · Reflextherapie</span>
+                                <h2>Fußreflexzonen-Therapie</h2>
+                                <p class="detail-lead">
+                                    Über präzise Druckpunkte an den Füßen wird der
+                                    gesamte Körper erreicht — jede Zone korrespondiert
+                                    mit einem Organ oder Körperbereich.
+                                </p>
+                                <p>
+                                    Die Fußreflexzonentherapie basiert auf der
+                                    Erkenntnis, dass der Fuß ein Mikrosystem des
+                                    gesamten Körpers darstellt. Durch gezielten Druck
+                                    auf bestimmte Zonen lassen sich Organfunktionen
+                                    harmonisieren und die Selbstheilungskräfte des
+                                    Körpers aktivieren.
+                                </p>
+                                <h3>Anwendungsgebiete</h3>
+                                <ul class="detail-list">
+                                    <li>Kopfschmerzen &amp; Migräne</li>
+                                    <li>Verdauungsstörungen</li>
+                                    <li>Schlafprobleme</li>
+                                    <li>Hormonelle Ungleichgewichte</li>
+                                    <li>Stress &amp; Erschöpfung</li>
+                                    <li>Atemwegserkrankungen</li>
+                                    <li>Menstruationsbeschwerden</li>
+                                    <li>Rückenschmerzen (reflektorisch)</li>
+                                </ul>
+                                <h3>Wirkungen</h3>
+                                <ul class="detail-list">
+                                    <li>Harmonisiert Organfunktionen</li>
+                                    <li>Aktiviert die Selbstheilungskräfte</li>
+                                    <li>Reduziert Stress und Anspannung</li>
+                                    <li>Verbessert die Durchblutung</li>
+                                    <li>Fördert tiefe Entspannung</li>
+                                </ul>
+                                <div class="detail-cta">
+                                    <a href="https://wa.me/4917647115700?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener" class="btn btn-primary" data-close>
+                                        <span>Termin vereinbaren</span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="service-card has-image reveal-up" data-tilt style="--d:.25s" data-therapy="tuina">
+                        <div class="service-image"><img src="images/therapies/tuina.jpg" alt="Tui Na" /></div>
+                        <div class="service-meta">
+                            <span>05</span><span>Tradition</span>
+                        </div>
+                        <h3>Tui Na</h3>
                         <p>
                             Traditionelle chinesische Manualtherapie. Kombiniert
                             Dehnung, Druck und rhythmische Bewegungen zur
@@ -350,177 +725,120 @@
                                 <path d="M5 12h14M13 5l7 7-7 7"/>
                             </svg>
                         </div>
+                        <div class="therapy-detail" hidden>
+                            <img src="images/therapies/tuina.jpg" class="detail-hero" alt="" />
+                            <div class="detail-content">
+                                <span class="detail-eyebrow">05 · Traditionelle Chinesische Medizin</span>
+                                <h2>Tui Na</h2>
+                                <p class="detail-lead">
+                                    Eine der ältesten Formen der Manualtherapie —
+                                    eine tragende Säule der Traditionellen Chinesischen
+                                    Medizin (TCM), deren Wurzeln über 2000 Jahre zurückreichen.
+                                </p>
+                                <p>
+                                    Der Name Tui Na bedeutet wörtlich „schieben und greifen".
+                                    Die Therapie kombiniert präzise Grifftechniken mit
+                                    Akupressur und Gelenkmobilisationen. Anders als bei
+                                    westlichen Massagen arbeitet Tui Na entlang der
+                                    Meridiane und zielt darauf ab, den freien Qi-Fluss
+                                    wiederherzustellen und Blockaden zu lösen.
+                                </p>
+                                <h3>Techniken</h3>
+                                <ul class="detail-list">
+                                    <li>Drücken, Schieben, Reiben, Kneten</li>
+                                    <li>Gezielte Akupressur</li>
+                                    <li>Gelenkmobilisation</li>
+                                    <li>Dehnungstechniken</li>
+                                    <li>Rhythmische Bewegungen</li>
+                                </ul>
+                                <h3>Indikationen</h3>
+                                <ul class="detail-list">
+                                    <li>Rückenschmerzen (akut &amp; chronisch)</li>
+                                    <li>Nackenverspannungen</li>
+                                    <li>Kopfschmerzen &amp; Migräne</li>
+                                    <li>Verdauungsstörungen</li>
+                                    <li>Schlafstörungen</li>
+                                    <li>Bewegungseinschränkungen</li>
+                                    <li>Stress und innere Unruhe</li>
+                                </ul>
+                                <div class="detail-cta">
+                                    <a href="https://wa.me/4917647115700?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener" class="btn btn-primary" data-close>
+                                        <span>Termin vereinbaren</span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </article>
 
-                    <article class="service-card reveal-up" data-tilt style="--d:.1s">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
-                                <path d="M24 6v8M24 34v8M6 24h8M34 24h8M11 11l6 6M31 31l6 6M11 37l6-6M31 17l6-6"/>
-                                <circle cx="24" cy="24" r="4"/>
-                            </svg>
-                        </div>
+                    <article class="service-card has-image reveal-up" data-tilt style="--d:.3s" data-therapy="ohrakupunktur">
+                        <div class="service-image"><img src="images/therapies/ear.jpg" alt="Ohrakupunktur" /></div>
                         <div class="service-meta">
-                            <span>03</span><span>Wellness</span>
+                            <span>06</span><span>Akupunktur</span>
                         </div>
-                        <h3>Wellness-Massage</h3>
+                        <h3>Ohrakupunktur</h3>
                         <p>
-                            Ein sinnliches Ritual zur Tiefenentspannung.
-                            Warme Öle, fließende Bewegungen und vollständige
-                            Auszeit vom Alltag — für Körper und Geist.
+                            Präzise Akupunktur-Punkte am Ohr regulieren
+                            Schmerzen, Stress und chronische Beschwerden.
+                            Sanft, gezielt und effektiv.
                         </p>
                         <div class="service-arrow">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                                 <path d="M5 12h14M13 5l7 7-7 7"/>
                             </svg>
                         </div>
-                    </article>
-
-                    <article class="service-card reveal-up" data-tilt style="--d:.15s">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
-                                <path d="M8 30c4-6 8-10 16-10s12 4 16 10"/>
-                                <path d="M24 10v10M20 14l8 0"/>
-                                <circle cx="24" cy="36" r="2"/>
-                            </svg>
-                        </div>
-                        <div class="service-meta">
-                            <span>04</span><span>Performance</span>
-                        </div>
-                        <h3>Sport-Massage</h3>
-                        <p>
-                            Gezielte Behandlung für Aktive und Athleten.
-                            Beschleunigt Regeneration, beugt Verletzungen
-                            vor und optimiert die Leistungsfähigkeit.
-                        </p>
-                        <div class="service-arrow">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <path d="M5 12h14M13 5l7 7-7 7"/>
-                            </svg>
-                        </div>
-                    </article>
-
-                    <article class="service-card reveal-up" data-tilt style="--d:.2s">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
-                                <path d="M24 8c-8 0-14 6-14 14 0 10 14 18 14 18s14-8 14-18c0-8-6-14-14-14Z"/>
-                                <circle cx="24" cy="22" r="4"/>
-                            </svg>
-                        </div>
-                        <div class="service-meta">
-                            <span>05</span><span>Spezialbehandlung</span>
-                        </div>
-                        <h3>Kryolipolyse</h3>
-                        <p>
-                            Modernste Körperformung durch gezielte Kälte.
-                            Nicht-invasiv, klinisch geprüft und effektiv.
-                            <span class="price-line">Ab 99 € · 1 Zone · 179 € · 2 Zonen</span>
-                        </p>
-                        <div class="service-arrow">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <path d="M5 12h14M13 5l7 7-7 7"/>
-                            </svg>
+                        <div class="therapy-detail" hidden>
+                            <img src="images/therapies/ear.jpg" class="detail-hero" alt="" />
+                            <div class="detail-content">
+                                <span class="detail-eyebrow">06 · Aurikulotherapie</span>
+                                <h2>Ohrakupunktur</h2>
+                                <p class="detail-lead">
+                                    Eine präzise Form der Reflextherapie — das Ohr
+                                    als Landkarte des gesamten Körpers.
+                                </p>
+                                <p>
+                                    Die Ohrakupunktur (Aurikulotherapie) wurde in den
+                                    1950er Jahren von dem französischen Arzt Dr. Paul
+                                    Nogier entwickelt. Sie basiert auf der Erkenntnis,
+                                    dass das Ohr ca. 200 Reflexpunkte enthält, die
+                                    jeweils mit einem bestimmten Organ, Gelenk oder
+                                    Körperbereich korrespondieren. Durch die gezielte
+                                    Stimulation dieser Punkte lassen sich Beschwerden
+                                    sanft und präzise behandeln.
+                                </p>
+                                <h3>Besondere Vorteile</h3>
+                                <ul class="detail-list">
+                                    <li>Sanft und präzise</li>
+                                    <li>Löst auch tief verwurzelte Blockaden</li>
+                                    <li>Nachhaltige Wirkung mit wenigen Sitzungen</li>
+                                    <li>Gut kombinierbar mit anderen Therapien</li>
+                                    <li>Geeignet bei Nadelangst (alternativ Druck, Samen)</li>
+                                </ul>
+                                <h3>Indikationen</h3>
+                                <ul class="detail-list">
+                                    <li>Chronische Schmerzen aller Art</li>
+                                    <li>Stress, Angst &amp; Schlafstörungen</li>
+                                    <li>Suchtverhalten (Raucherentwöhnung, Gewichtsreduktion)</li>
+                                    <li>Allergien &amp; Heuschnupfen</li>
+                                    <li>Migräne &amp; Kopfschmerzen</li>
+                                    <li>Hormonelle Beschwerden</li>
+                                    <li>Verdauungsstörungen</li>
+                                </ul>
+                                <div class="detail-cta">
+                                    <a href="https://wa.me/4917647115700?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener" class="btn btn-primary" data-close>
+                                        <span>Termin vereinbaren</span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </article>
 
-                    <article class="service-card reveal-up" data-tilt style="--d:.25s">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
-                                <path d="M14 14c10 0 16 8 20 20M14 14c0 10 8 16 20 20M14 14l20 20"/>
-                                <circle cx="14" cy="14" r="2"/>
-                                <circle cx="34" cy="34" r="2"/>
-                            </svg>
-                        </div>
-                        <div class="service-meta">
-                            <span>06</span><span>Präzision</span>
-                        </div>
-                        <h3>Fußreflexzonen</h3>
-                        <p>
-                            Über die Füße den ganzen Körper erreichen.
-                            Gezielter Druck auf Reflexpunkte harmonisiert
-                            Organe und Systeme auf sanfte Weise.
-                        </p>
-                        <div class="service-arrow">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <path d="M5 12h14M13 5l7 7-7 7"/>
-                            </svg>
-                        </div>
-                    </article>
-
-                    <article class="service-card reveal-up" data-tilt style="--d:.3s">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
-                                <path d="M10 24c0-8 6-14 14-14s14 6 14 14"/>
-                                <path d="M10 24c0 8 6 14 14 14s14-6 14-14"/>
-                                <path d="M14 24h20M19 19l10 10M19 29l10-10"/>
-                            </svg>
-                        </div>
-                        <div class="service-meta">
-                            <span>07</span><span>Entgiftung</span>
-                        </div>
-                        <h3>Lymphdrainage</h3>
-                        <p>
-                            Sanfte, rhythmische Technik zur Aktivierung
-                            des Lymphsystems. Reduziert Schwellungen,
-                            stärkt das Immunsystem und entgiftet.
-                        </p>
-                        <div class="service-arrow">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <path d="M5 12h14M13 5l7 7-7 7"/>
-                            </svg>
-                        </div>
-                    </article>
-
-                    <article class="service-card reveal-up" data-tilt style="--d:.35s">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
-                                <circle cx="16" cy="24" r="6"/>
-                                <circle cx="32" cy="24" r="6"/>
-                                <circle cx="24" cy="14" r="4"/>
-                                <circle cx="24" cy="34" r="4"/>
-                            </svg>
-                        </div>
-                        <div class="service-meta">
-                            <span>08</span><span>Tradition</span>
-                        </div>
-                        <h3>Schröpfen</h3>
-                        <p>
-                            Traditionelles und chinesisches Schröpfen.
-                            Löst hartnäckige Verspannungen, verbessert
-                            die Durchblutung und aktiviert Selbstheilung.
-                        </p>
-                        <div class="service-arrow">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <path d="M5 12h14M13 5l7 7-7 7"/>
-                            </svg>
-                        </div>
-                    </article>
-
-                    <article class="service-card reveal-up" data-tilt style="--d:.4s">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3">
-                                <path d="M8 24h8l4-12 8 24 4-12h8"/>
-                            </svg>
-                        </div>
-                        <div class="service-meta">
-                            <span>09</span><span>Technologie</span>
-                        </div>
-                        <h3>Kaltlaser & Ultraschall</h3>
-                        <p>
-                            Modernste Gerätetechnik zur Schmerztherapie,
-                            Zellregeneration und zur Behandlung chronischer
-                            Beschwerden auf sanfte Weise.
-                        </p>
-                        <div class="service-arrow">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                                <path d="M5 12h14M13 5l7 7-7 7"/>
-                            </svg>
-                        </div>
-                    </article>
                 </div>
 
                 <div class="services-footer reveal">
                     <p>
-                        <em>+ Sotai Ho · Magnettherapie · Radiofrequenz · Pressotherapie · Anti-Cellulite · Fettreduktion</em>
+                        <em>Behandlungen können auch mit blauem Privatrezept von Ärzten oder Heilpraktikern durchgeführt werden.</em>
                     </p>
                     <a href="#contact" class="btn btn-ghost" data-magnetic>
                         <span>Vollständiges Angebot erfragen</span>
@@ -532,76 +850,182 @@
             </div>
         </section>
 
-        <!-- BENEFITS -->
-        <section class="section benefits" id="benefits">
-            <div class="container">
-                <div class="benefits-header">
-                    <span class="eyebrow reveal">04 · Werte</span>
+        <!-- BESCHWERDEN -->
+        <section class="section beschwerden" id="beschwerden">
+            <div class="container grid-split reverse">
+                <div class="col-text">
+                    <span class="eyebrow reveal">05 · Beschwerden</span>
                     <h2 class="section-title reveal">
-                        Warum Kiroshiatsu.
+                        Wann <em>KiroShiatsu®</em><br/>helfen kann.
                     </h2>
+                    <p class="lead reveal">
+                        Seit über 35 Jahren arbeite ich mit Menschen, die oft
+                        schon vieles probiert haben — und endlich eine gezielte
+                        Lösung finden.
+                    </p>
+
+                    <ul class="beschwerden-list reveal">
+                        <li><span>01</span>Rückenschmerzen · chronisch &amp; akut</li>
+                        <li><span>02</span>Nackenverspannungen</li>
+                        <li><span>03</span>Muskuläre Blockaden</li>
+                        <li><span>04</span>Ischialgie</li>
+                        <li><span>05</span>Kopfschmerzen &amp; Migräne</li>
+                        <li><span>06</span>Spannungskopfschmerz</li>
+                        <li><span>07</span>Schulter- &amp; Bewegungsbeschwerden</li>
+                        <li><span>08</span>Sportverletzungen</li>
+                        <li><span>09</span>Chronische Schmerzen</li>
+                    </ul>
+
+                    <div class="beschwerden-cta reveal">
+                        <p>
+                            <strong>Beschreiben Sie mir kurz Ihr Problem</strong> —
+                            ich sage Ihnen ehrlich, ob und wie ich Ihnen
+                            helfen kann.
+                        </p>
+                        <a href="#contact" class="btn btn-primary" data-magnetic>
+                            <span>Jetzt Kontakt aufnehmen</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
 
-                <div class="benefits-grid">
-                    <article class="benefit reveal-up">
-                        <div class="benefit-num">01</div>
-                        <h3>Echte Expertise</h3>
-                        <p>
-                            Über 25 Jahre Praxiserfahrung als diplomierter
-                            Chiromasseur. Fundiertes Wissen, kontinuierliche
-                            Weiterbildung und nachgewiesene Ergebnisse.
-                        </p>
-                    </article>
+                <div class="col-visual reveal-parallax">
+                    <div class="beschwerden-image">
+                        <img src="images/beschwerden.jpg" alt="Therapeutische Massage bei Rückenschmerzen" />
+                        <div class="beschwerden-overlay">
+                            <span class="overlay-line">Wenn klassische Massagen</span>
+                            <span class="overlay-line">nicht mehr helfen —</span>
+                            <span class="overlay-line"><em>hier beginnt die Arbeit.</em></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <article class="benefit reveal-up" style="--d:.1s">
-                        <div class="benefit-num">02</div>
-                        <h3>Ost trifft West</h3>
-                        <p>
-                            Die seltene Verbindung aus westlicher Anatomie
-                            und östlicher Meridian-Lehre. Eine ganzheitliche
-                            Sichtweise, die beide Seiten würdigt.
-                        </p>
-                    </article>
+        <!-- ÄSTHETISCHE MASSAGE -->
+        <section class="section aesthetik" id="aesthetik">
+            <div class="container">
+                <div class="aesthetik-header">
+                    <span class="eyebrow reveal">06 · Ästhetische Massage</span>
+                    <h2 class="section-title reveal">
+                        Moderne <em>Körperformung</em><br/>und Anti-Aging.
+                    </h2>
+                    <p class="section-intro reveal">
+                        Neben der therapeutischen Arbeit biete ich moderne,
+                        nicht-invasive Behandlungen zur Körperformung,
+                        Cellulite-Reduktion und Hautverjüngung.
+                    </p>
+                </div>
 
-                    <article class="benefit reveal-up" style="--d:.2s">
-                        <div class="benefit-num">03</div>
-                        <h3>Maßgeschneidert</h3>
-                        <p>
-                            Keine Standardprotokolle. Jede Behandlung wird
-                            auf Ihren Körper, Ihre Geschichte und Ihre Ziele
-                            individuell abgestimmt.
-                        </p>
+                <div class="aesthetik-grid">
+                    <article class="aesthetik-card reveal-up">
+                        <span class="aesthetik-num">01</span>
+                        <h3>Kryolipolyse</h3>
+                        <p>Fettreduktion durch gezielte Kälte — klinisch geprüft, nicht-invasiv.</p>
                     </article>
+                    <article class="aesthetik-card reveal-up" style="--d:.05s">
+                        <span class="aesthetik-num">02</span>
+                        <h3>Faltentherapie</h3>
+                        <p>Gezielte Behandlung von Falten und Anti-Aging-Anwendungen.</p>
+                    </article>
+                    <article class="aesthetik-card reveal-up" style="--d:.1s">
+                        <span class="aesthetik-num">03</span>
+                        <h3>Anti-Cellulite</h3>
+                        <p>Effektive Behandlung bei Cellulite zur sichtbaren Hautglättung.</p>
+                    </article>
+                    <article class="aesthetik-card reveal-up" style="--d:.15s">
+                        <span class="aesthetik-num">04</span>
+                        <h3>Lypo-Kaltlaser</h3>
+                        <p>Moderne Technologie zur gezielten Fettreduktion ohne Eingriff.</p>
+                    </article>
+                    <article class="aesthetik-card reveal-up" style="--d:.2s">
+                        <span class="aesthetik-num">05</span>
+                        <h3>Ultra-Kavitation</h3>
+                        <p>Ultraschall-Technologie zur Körperformung und Figurbildung.</p>
+                    </article>
+                    <article class="aesthetik-card reveal-up" style="--d:.25s">
+                        <span class="aesthetik-num">06</span>
+                        <h3>Presstherapie</h3>
+                        <p>Aktivierung des Lymphsystems zur Entwässerung und Drainage.</p>
+                    </article>
+                    <article class="aesthetik-card reveal-up" style="--d:.3s">
+                        <span class="aesthetik-num">07</span>
+                        <h3>Radiofrequenz</h3>
+                        <p>Hautstraffung und Kollagenstimulation durch Radiofrequenz.</p>
+                    </article>
+                    <article class="aesthetik-card reveal-up" style="--d:.35s">
+                        <span class="aesthetik-num">08</span>
+                        <h3>Holzroller-Therapie</h3>
+                        <p>Manuelle Körperformung mit traditionellen Holzwerkzeugen.</p>
+                    </article>
+                </div>
 
-                    <article class="benefit reveal-up" style="--d:.3s">
-                        <div class="benefit-num">04</div>
-                        <h3>Diskreter Raum</h3>
-                        <p>
-                            Eine geschützte, ruhige Umgebung ohne Zeitdruck.
-                            Hier geht es nicht um Termine — hier geht es um
-                            Sie und Ihr Wohlbefinden.
-                        </p>
-                    </article>
+                <div class="aesthetik-price reveal">
+                    <span>Kryolipolyse · ab <strong>99 €</strong> 1 Zone · <strong>179 €</strong> 2 Zonen</span>
+                </div>
+            </div>
+        </section>
 
-                    <article class="benefit reveal-up" style="--d:.4s">
-                        <div class="benefit-num">05</div>
-                        <h3>Heilbehandlung</h3>
-                        <p>
-                            Behandlungen können mit Privatrezept als
-                            medizinische Heilbehandlung durchgeführt
-                            werden — rechtlich anerkannt und qualifiziert.
-                        </p>
-                    </article>
+        <!-- PRIVATREZEPT -->
+        <section class="section rezept" id="rezept">
+            <div class="container grid-split">
+                <div class="col-visual reveal-parallax">
+                    <div class="rezept-frame">
+                        <img src="images/rezept.jpg" alt="Blaues Privatrezept — Kassenleistung" class="rezept-image" />
+                        <span class="rezept-badge">Privatrezept</span>
+                    </div>
+                </div>
 
-                    <article class="benefit reveal-up" style="--d:.5s">
-                        <div class="benefit-num">06</div>
-                        <h3>Nachhaltige Wirkung</h3>
-                        <p>
-                            Wir arbeiten nicht nur an Symptomen. Unser Ziel:
-                            langfristige Veränderung, Selbstwahrnehmung und
-                            dauerhaftes Gleichgewicht.
-                        </p>
-                    </article>
+                <div class="col-text">
+                    <span class="eyebrow reveal">07 · Kassenleistung</span>
+                    <h2 class="section-title reveal">
+                        Auch mit <em>blauem Privatrezept</em> möglich.
+                    </h2>
+
+                    <p class="lead reveal">
+                        Behandlungen können mit blauem Privatrezept von Ärzten
+                        oder Heilpraktikern als medizinische Heilbehandlung
+                        durchgeführt werden.
+                    </p>
+
+                    <div class="rezept-points reveal">
+                        <div class="rezept-point">
+                            <span class="rezept-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                            </span>
+                            <p>
+                                Wenn Sie über ein <strong>Privatrezept</strong> verfügen,
+                                können Sie selbstverständlich die von Ihrem
+                                Arzt empfohlene Behandlung in meiner Praxis
+                                erhalten.
+                            </p>
+                        </div>
+
+                        <div class="rezept-point">
+                            <span class="rezept-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                                    <path d="M20 6L9 17l-5-5"/>
+                                </svg>
+                            </span>
+                            <p>
+                                Wenn Ihre <strong>private Krankenversicherung</strong>
+                                die empfohlenen Behandlungen übernimmt, erhalten
+                                Sie nach der Behandlung eine entsprechende
+                                Rechnung zur Einreichung bei Ihrer Versicherung.
+                            </p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/4917647115700?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener" class="btn btn-primary" data-magnetic>
+                        <span>Termin vereinbaren</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M13 5l7 7-7 7"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>
@@ -610,9 +1034,9 @@
         <section class="section testimonials" id="testimonials">
             <div class="container">
                 <div class="test-header">
-                    <span class="eyebrow reveal">05 · Stimmen</span>
+                    <span class="eyebrow reveal">08 · Stimmen</span>
                     <h2 class="section-title reveal">
-                        Vertrauen, das <em>spürbar</em> ist.
+                        Was <em>Patienten</em> sagen.
                     </h2>
                 </div>
 
@@ -620,59 +1044,245 @@
                     <figure class="test-card reveal-up">
                         <div class="test-stars">★★★★★</div>
                         <blockquote>
-                            Ich bin seit über drei Jahren Patientin bei
-                            Victor — und seitdem habe ich meine
-                            jahrelangen Rückenschmerzen vergessen.
-                            Außergewöhnliches Fachwissen, herzliche Art.
+                            Er weiß genau, wovon er spricht, und seine
+                            Erfahrung zeigt sich in jeder Behandlung.
+                            Außergewöhnliche Arbeit mit wertvollen Tipps
+                            für den Alltag.
                         </blockquote>
                         <figcaption>
-                            <strong>Claudia M.</strong>
-                            <span>Bielefeld</span>
+                            <strong>Patient · Bielefeld</strong>
+                            <span>Langzeitbehandlung</span>
                         </figcaption>
                     </figure>
 
                     <figure class="test-card reveal-up" style="--d:.1s">
                         <div class="test-stars">★★★★★</div>
                         <blockquote>
-                            Die Kombination aus Shiatsu und Chiromassage
-                            ist einzigartig. Man spürt nach der ersten
-                            Sitzung, dass hier ein wahrer Meister
-                            seines Fachs arbeitet.
+                            Er findet die Ursache des Schmerzes und weiß
+                            präzise und gezielt zu arbeiten. Nach Jahren
+                            voller Versuche endlich eine echte Lösung.
                         </blockquote>
                         <figcaption>
-                            <strong>Markus R.</strong>
-                            <span>Triathlet · Osnabrück</span>
+                            <strong>Patient · NRW</strong>
+                            <span>Chronische Rückenschmerzen</span>
                         </figcaption>
                     </figure>
 
                     <figure class="test-card reveal-up" style="--d:.2s">
                         <div class="test-stars">★★★★★</div>
                         <blockquote>
-                            Ruhe, Würde und echte Kompetenz. Ein Ort, der
-                            nicht mit der Zeit, sondern mit dem Menschen
-                            arbeitet. Absolute Empfehlung — ohne
-                            Einschränkung.
+                            Bei ihm sind Sie in sehr guten Händen —
+                            fachlich wie menschlich. Er nimmt sich Zeit,
+                            erklärt verständlich und arbeitet mit großer
+                            Präzision.
                         </blockquote>
                         <figcaption>
-                            <strong>Elena S.</strong>
-                            <span>Gütersloh</span>
+                            <strong>Patientin · Bielefeld</strong>
+                            <span>Regelmäßige Behandlung</span>
                         </figcaption>
                     </figure>
                 </div>
 
                 <div class="test-trust reveal">
                     <div class="trust-item">
-                        <span class="trust-num">4.9</span>
-                        <div class="trust-stars">★★★★★</div>
-                        <span class="trust-label">Bewertung</span>
+                        <span class="trust-num">35+</span>
+                        <span class="trust-label">Jahre Erfahrung</span>
                     </div>
                     <div class="trust-item">
-                        <span class="trust-num">500+</span>
-                        <span class="trust-label">Zufriedene Patienten</span>
+                        <span class="trust-num">®</span>
+                        <span class="trust-label">Eigene Methode</span>
                     </div>
                     <div class="trust-item">
                         <span class="trust-num">12+</span>
                         <span class="trust-label">Jahre in Bielefeld</span>
+                    </div>
+                </div>
+
+                <!-- Ihre Meinung teilen -->
+                <div class="meinung-box reveal-up">
+                    <div class="meinung-intro">
+                        <span class="eyebrow">Ihre Meinung</span>
+                        <h3>Teilen Sie Ihre <em>Erfahrung</em>.</h3>
+                        <p>
+                            Ihre Rückmeldung hilft mir, meine Arbeit weiter zu
+                            verbessern — und anderen Menschen, Vertrauen zu fassen.
+                            Schreiben Sie mir ein paar Zeilen über Ihre Behandlung.
+                        </p>
+                    </div>
+
+                    <form class="meinung-form" id="meinungForm" novalidate>
+                        <div class="form-field">
+                            <label>Ihre Bewertung</label>
+                            <div class="star-rating" id="starRating" role="radiogroup" aria-label="Bewertung">
+                                <button type="button" class="star" data-value="1" aria-label="1 Stern">★</button>
+                                <button type="button" class="star" data-value="2" aria-label="2 Sterne">★</button>
+                                <button type="button" class="star" data-value="3" aria-label="3 Sterne">★</button>
+                                <button type="button" class="star" data-value="4" aria-label="4 Sterne">★</button>
+                                <button type="button" class="star" data-value="5" aria-label="5 Sterne">★</button>
+                                <input type="hidden" id="meinungStars" name="rating" value="5" />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="meinungName">Name</label>
+                                <input type="text" id="meinungName" name="name" required autocomplete="name" />
+                            </div>
+                            <div class="form-field">
+                                <label for="meinungCity">Ort (optional)</label>
+                                <input type="text" id="meinungCity" name="city" placeholder="z.&nbsp;B. Bielefeld" />
+                            </div>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="meinungText">Ihre Erfahrung</label>
+                            <textarea id="meinungText" name="meinung" rows="4" required placeholder="Erzählen Sie kurz, wie Sie die Behandlung erlebt haben..."></textarea>
+                        </div>
+
+                        <div class="meinung-actions">
+                            <button type="submit" class="btn btn-primary" data-send="whatsapp" data-magnetic>
+                                <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+                                    <path d="M16.004 2.667C8.643 2.667 2.671 8.64 2.671 16c0 2.67.78 5.155 2.116 7.25L2.667 29.333l6.24-2.073a13.25 13.25 0 0 0 7.097 2.073h.006c7.36 0 13.333-5.972 13.333-13.333 0-3.563-1.387-6.91-3.905-9.427a13.237 13.237 0 0 0-9.434-3.906Z"/>
+                                </svg>
+                                <span>Per WhatsApp senden</span>
+                            </button>
+                            <button type="submit" class="btn btn-ghost" data-send="email" data-magnetic>
+                                <span>Per E-Mail senden</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="meinung-feedback" id="meinungFeedback"></div>
+
+                        <p class="meinung-note">
+                            <em>Hinweis: Ihre Meinung wird nach Prüfung auf dieser Seite veröffentlicht — nur mit Ihrem Einverständnis.</em>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTRAINDIKATIONEN -->
+        <section class="section kontra" id="kontraindikationen">
+            <div class="container">
+                <div class="kontra-header">
+                    <span class="eyebrow reveal">09 · Kontraindikationen</span>
+                    <h2 class="section-title reveal">
+                        Wann ich <em>nicht</em> behandle.
+                    </h2>
+                    <p class="section-intro reveal">
+                        Verantwortungsvolle Behandlung bedeutet auch, Grenzen
+                        zu erkennen. In bestimmten Fällen ist eine manuelle
+                        Therapie nicht angezeigt — Ihre Sicherheit hat Vorrang.
+                    </p>
+                </div>
+
+                <!-- Absolute Kontraindikationen -->
+                <div class="kontra-group reveal">
+                    <div class="kontra-group-header">
+                        <span class="kontra-group-tag kontra-tag-absolute">Absolut</span>
+                        <h3>Absolute Kontraindikationen</h3>
+                        <p>Bei diesen Zuständen findet keine Behandlung statt.</p>
+                    </div>
+
+                    <div class="kontra-grid">
+                        <div class="kontra-item kontra-absolute reveal-up">
+                            <h4>Fieber &amp; Akute Infektionen</h4>
+                            <p>Bei Fieber, Grippe oder akuten entzündlichen Erkrankungen verschiebe ich die Behandlung bis zur vollständigen Genesung.</p>
+                        </div>
+                        <div class="kontra-item kontra-absolute reveal-up" style="--d:.05s">
+                            <h4>Thrombose &amp; Thrombophlebitis</h4>
+                            <p>Bei bestehender oder verdächtigter Thrombose ist eine Massage nicht möglich — akute Lebensgefahr durch Embolie-Risiko.</p>
+                        </div>
+                        <div class="kontra-item kontra-absolute reveal-up" style="--d:.1s">
+                            <h4>Offene Wunden &amp; Hauterkrankungen</h4>
+                            <p>Offene Wunden, Ekzeme oder infektiöse Hauterkrankungen im Behandlungsbereich werden nicht massiert.</p>
+                        </div>
+                        <div class="kontra-item kontra-absolute reveal-up" style="--d:.15s">
+                            <h4>Frische Verletzungen</h4>
+                            <p>Nicht verheilte Frakturen, Sehnen- oder Muskelrisse werden zuerst ärztlich behandelt.</p>
+                        </div>
+                        <div class="kontra-item kontra-absolute reveal-up" style="--d:.2s">
+                            <h4>Akute Herz-Kreislauf-Probleme</h4>
+                            <p>Bei akutem Herzinfarkt, Schlaganfall oder schweren Kreislaufstörungen ist keine Behandlung möglich.</p>
+                        </div>
+                        <div class="kontra-item kontra-absolute reveal-up" style="--d:.25s">
+                            <h4>Akute Tumorerkrankungen</h4>
+                            <p>Bei aktiven, unbehandelten Krebserkrankungen wird nur nach ärztlicher Rücksprache und sehr gezielt gearbeitet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Relative Kontraindikationen -->
+                <div class="kontra-group reveal">
+                    <div class="kontra-group-header">
+                        <span class="kontra-group-tag kontra-tag-relative">Relativ</span>
+                        <h3>Relative Kontraindikationen</h3>
+                        <p>In diesen Fällen ist eine Behandlung nach ärztlicher Rücksprache möglich — angepasst an Ihre Situation.</p>
+                    </div>
+
+                    <div class="kontra-grid">
+                        <div class="kontra-item kontra-relative reveal-up">
+                            <h4>Schwangerschaft</h4>
+                            <p>Im ersten Trimester nur nach ärztlicher Freigabe. Ab dem zweiten Trimester mit angepassten Techniken und Lagerung möglich.</p>
+                        </div>
+                        <div class="kontra-item kontra-relative reveal-up" style="--d:.05s">
+                            <h4>Kürzliche Operationen</h4>
+                            <p>In der Wundheilungsphase warten wir die ärztliche Freigabe ab — danach unterstützen wir gezielt die Regeneration.</p>
+                        </div>
+                        <div class="kontra-item kontra-relative reveal-up" style="--d:.1s">
+                            <h4>Bluthochdruck</h4>
+                            <p>Bei medikamentös nicht eingestelltem Bluthochdruck: sanfte Techniken, keine stark aktivierenden Anwendungen.</p>
+                        </div>
+                        <div class="kontra-item kontra-relative reveal-up" style="--d:.15s">
+                            <h4>Osteoporose</h4>
+                            <p>In fortgeschrittenem Stadium wird mit stark reduziertem Druck und angepassten Techniken gearbeitet.</p>
+                        </div>
+                        <div class="kontra-item kontra-relative reveal-up" style="--d:.2s">
+                            <h4>Diabetes mellitus</h4>
+                            <p>Bei gut eingestelltem Diabetes kein Problem — bei akuter Entgleisung bitte ärztliche Rücksprache.</p>
+                        </div>
+                        <div class="kontra-item kontra-relative reveal-up" style="--d:.25s">
+                            <h4>Gerinnungsstörungen</h4>
+                            <p>Bei bekannten Blutgerinnungsstörungen oder Einnahme blutverdünnender Medikamente: sanfte Techniken.</p>
+                        </div>
+                        <div class="kontra-item kontra-relative reveal-up" style="--d:.3s">
+                            <h4>Epilepsie</h4>
+                            <p>Bei gut eingestellter Epilepsie möglich — wir vermeiden jedoch stark stimulierende Techniken.</p>
+                        </div>
+                        <div class="kontra-item kontra-relative reveal-up" style="--d:.35s">
+                            <h4>Krampfadern</h4>
+                            <p>Im Bereich ausgeprägter Krampfadern wird nicht direkt gearbeitet — Behandlung angrenzender Bereiche ist möglich.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Note -->
+                <div class="kontra-note-box reveal">
+                    <div class="kontra-note-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 8v4M12 16h.01"/>
+                        </svg>
+                    </div>
+                    <div class="kontra-note-content">
+                        <h4>Im Zweifelsfall — bitte fragen Sie mich.</h4>
+                        <p>
+                            Verantwortungsvolle Behandlung bedeutet Transparenz. Teilen
+                            Sie mir vor der ersten Sitzung Ihre Vorerkrankungen,
+                            aktuellen Medikamente und Beschwerden mit. Gemeinsam prüfen
+                            wir, ob und wie eine Behandlung für Sie sicher und wirksam
+                            durchgeführt werden kann.
+                        </p>
+                        <a href="#contact" class="btn btn-ghost" data-magnetic>
+                            <span>Jetzt Situation besprechen</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M13 5l7 7-7 7"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -682,28 +1292,35 @@
         <section class="section contact" id="contact">
             <div class="container">
                 <div class="contact-header">
-                    <span class="eyebrow reveal">06 · Kontakt</span>
+                    <span class="eyebrow reveal">10 · Kontakt</span>
                     <h2 class="section-title reveal">
-                        Bereit für Ihren<br/>
-                        ersten <em>Schritt</em>?
+                        Hören Sie auf, unter<br/>
+                        <em>Schmerzen</em> zu leiden.
                     </h2>
                     <p class="section-intro reveal">
-                        Vereinbaren Sie Ihr Erstgespräch — 40 €, das auf
-                        zukünftige Behandlungen angerechnet wird. Wir nehmen
-                        uns Zeit für Sie.
+                        Wenn Sie schon vieles probiert haben und keine
+                        nachhaltige Besserung spüren, könnte ein anderer
+                        Ansatz der richtige Schritt sein. Ich nehme mir
+                        die nötige Zeit für Ihr Anliegen — individuell
+                        und gezielt abgestimmt auf Ihren Körper.
                     </p>
                 </div>
 
                 <div class="contact-layout">
                     <div class="contact-info reveal">
                         <div class="info-block">
-                            <span class="info-label">Praxis</span>
+                            <span class="info-label">Praxis · Standort</span>
                             <p>Detmolder Str. 429<br/>33605 Bielefeld · Stieghorst</p>
                         </div>
 
                         <div class="info-block">
-                            <span class="info-label">Telefon</span>
+                            <span class="info-label">Telefon · Festnetz</span>
                             <a href="tel:+4952197174457" class="info-link">+49 521 97174457</a>
+                        </div>
+
+                        <div class="info-block">
+                            <span class="info-label">Mobil · WhatsApp</span>
+                            <a href="https://wa.me/4917647115700?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener" class="info-link">+49 176 47115700</a>
                         </div>
 
                         <div class="info-block">
@@ -713,18 +1330,18 @@
 
                         <div class="info-block">
                             <span class="info-label">Öffnungszeiten</span>
-                            <p>Montag – Freitag<br/>11:00 – 19:00 Uhr</p>
+                            <p>Montag – Freitag<br/>9:00 – 18:00 Uhr</p>
                         </div>
 
                         <div class="info-block">
-                            <span class="info-label">Erstberatung</span>
-                            <p>40 € — vollständig anrechenbar auf Folgebehandlungen</p>
+                            <span class="info-label">Privatrezept</span>
+                            <p>Behandlung mit blauem Privatrezept von Ärzten oder Heilpraktikern möglich. Rechnung nach der Behandlung zur Einreichung bei Ihrer Versicherung.</p>
                         </div>
 
                         <div class="contact-social">
+                            <a href="https://wa.me/4917647115700?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener">WhatsApp</a>
                             <a href="#" aria-label="Instagram">Instagram</a>
                             <a href="#" aria-label="Facebook">Facebook</a>
-                            <a href="#" aria-label="LinkedIn">LinkedIn</a>
                         </div>
                     </div>
 
@@ -751,23 +1368,22 @@
                             <label for="service">Gewünschte Behandlung</label>
                             <select id="service" name="service">
                                 <option value="">Bitte wählen</option>
+                                <option>KiroShiatsu® (Signature)</option>
                                 <option>Shiatsu</option>
-                                <option>Tuina</option>
-                                <option>Chiromassage</option>
-                                <option>Wellness-Massage</option>
-                                <option>Sport-Massage</option>
-                                <option>Kryolipolyse</option>
+                                <option>Tui Na</option>
+                                <option>Sportmassage</option>
+                                <option>Manuelle Lymphdrainage</option>
                                 <option>Fußreflexzonen</option>
-                                <option>Lymphdrainage</option>
-                                <option>Schröpfen</option>
-                                <option>Erstberatung</option>
+                                <option>Ohrakupunktur</option>
+                                <option>Ästhetische Behandlung</option>
+                                <option>Erstgespräch</option>
                                 <option>Sonstiges</option>
                             </select>
                         </div>
 
                         <div class="form-field">
-                            <label for="message">Ihre Nachricht</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <label for="message">Beschreiben Sie Ihr Anliegen</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Was sind Ihre Beschwerden? Seit wann bestehen sie? Was haben Sie schon probiert?"></textarea>
                             <span class="form-error"></span>
                         </div>
 
@@ -813,10 +1429,11 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <span class="footer-logo">Ki<em>ro</em>shiatsu</span>
+                    <img src="images/logo.png" alt="KiroShiatsu® Massagepraxis" class="footer-logo-img" />
                     <p>
-                        Ganzheitliche Körperarbeit von Victor A. Koldobsky.
-                        Bielefeld · seit 2013.
+                        KiroShiatsu® — Therapeutische Massage zur
+                        Schmerzlinderung und muskulären Regeneration.
+                        Victor A. Koldobsky · Bielefeld · seit 2013.
                     </p>
                 </div>
 
@@ -824,15 +1441,19 @@
                     <span class="footer-label">Praxis</span>
                     <a href="#about">Über mich</a>
                     <a href="#method">Methode</a>
-                    <a href="#services">Behandlungen</a>
-                    <a href="#benefits">Werte</a>
+                    <a href="#services">Therapien</a>
+                    <a href="#beschwerden">Beschwerden</a>
+                    <a href="#aesthetik">Ästhetik</a>
+                    <a href="#kontraindikationen">Kontraindikationen</a>
                 </div>
 
                 <div class="footer-col">
                     <span class="footer-label">Kontakt</span>
-                    <a href="tel:+4952197174457">+49 521 97174457</a>
+                    <a href="tel:+4952197174457">Festnetz · +49 521 97174457</a>
+                    <a href="https://wa.me/4917647115700?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener">WhatsApp · +49 176 47115700</a>
                     <a href="mailto:info@kiroshiatsu.de">info@kiroshiatsu.de</a>
                     <a href="https://maps.google.com/?q=Detmolder+Str+429+33605+Bielefeld" target="_blank" rel="noopener">Detmolder Str. 429</a>
+                    <span>Mo–Fr · 9:00–18:00</span>
                 </div>
 
                 <div class="footer-col">
@@ -840,20 +1461,36 @@
                     <a href="#">Impressum</a>
                     <a href="#">Datenschutz</a>
                     <a href="#">AGB</a>
+                    <a href="#">Widerrufsrecht</a>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <span>© <span id="year"></span> Kiroshiatsu · Victor A. Koldobsky</span>
-                <span class="footer-made">Hergestellt mit Ruhe in Bielefeld</span>
+                <span>© <span id="year"></span> KiroShiatsu® · Victor A. Koldobsky</span>
+                <span class="footer-made">Der Name und das Logo KiroShiatsu sind eingetragene Marken.</span>
             </div>
         </div>
 
         <div class="footer-bigmark" aria-hidden="true">KIROSHIATSU</div>
     </footer>
 
+    <!-- Therapy detail modal -->
+    <div class="therapy-modal" id="therapyModal" aria-hidden="true">
+        <div class="therapy-modal-overlay" data-close></div>
+        <article class="therapy-modal-panel" role="dialog" aria-modal="true" aria-labelledby="therapyModalTitle">
+            <button class="therapy-modal-close" data-close aria-label="Schließen">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M6 6l12 12M18 6L6 18"/>
+                </svg>
+            </button>
+            <div class="therapy-modal-scroll">
+                <div class="therapy-modal-body" id="therapyModalBody"></div>
+            </div>
+        </article>
+    </div>
+
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/4952197174457" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp" data-magnetic>
+    <a href="https://wa.me/4917647115700?text=Hallo%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp" data-magnetic>
         <svg viewBox="0 0 32 32" fill="currentColor" width="26" height="26">
             <path d="M16.004 2.667C8.643 2.667 2.671 8.64 2.671 16c0 2.67.78 5.155 2.116 7.25L2.667 29.333l6.24-2.073a13.25 13.25 0 0 0 7.097 2.073h.006c7.36 0 13.333-5.972 13.333-13.333 0-3.563-1.387-6.91-3.905-9.427a13.237 13.237 0 0 0-9.434-3.906Zm0 2.666c2.849 0 5.525 1.11 7.542 3.126A10.604 10.604 0 0 1 26.671 16c0 5.889-4.782 10.667-10.667 10.667h-.005a10.593 10.593 0 0 1-5.422-1.485l-.389-.231-3.704 1.228 1.238-3.613-.252-.402A10.604 10.604 0 0 1 5.337 16c0-5.889 4.779-10.667 10.667-10.667Zm-5.98 6.027c-.287 0-.75.106-1.144.534-.394.427-1.504 1.47-1.504 3.587s1.543 4.16 1.757 4.448c.213.288 2.999 4.8 7.386 6.538 3.643 1.444 4.385 1.158 5.178 1.086.793-.07 2.554-1.042 2.915-2.05.36-1.008.36-1.873.252-2.052-.107-.178-.395-.285-.827-.498-.433-.213-2.555-1.262-2.953-1.405-.397-.143-.688-.214-.977.215-.29.427-1.12 1.403-1.374 1.692-.254.29-.507.325-.94.113-.433-.214-1.827-.674-3.482-2.147-1.287-1.146-2.156-2.56-2.41-2.99-.253-.427-.026-.658.188-.87.194-.191.432-.498.648-.747.216-.25.287-.427.432-.712.143-.285.07-.534-.035-.747-.107-.213-.94-2.337-1.32-3.192-.338-.77-.687-.672-.94-.683l-.792-.014Z"/>
         </svg>
