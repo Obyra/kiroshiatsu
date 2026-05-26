@@ -553,6 +553,13 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
     font-size: clamp(1.75rem, 3vw, 2.5rem);
     font-weight: 300;
     letter-spacing: -.01em;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+@media (max-width: 900px) {
+    .marquee { padding: 1.4rem 0; }
+    .marquee-track { gap: 1.75rem; animation-duration: 22s; }
 }
 .marquee-track em {
     color: var(--gold-deep);
@@ -1394,6 +1401,12 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: .01ms !important;
+    }
+    /* El marquee es decorativo y su contenido ES el movimiento: si se detiene,
+       el texto queda cortado por el borde. Lo dejamos correr (un poco más lento). */
+    .marquee-track {
+        animation-duration: 50s !important;
+        animation-iteration-count: infinite !important;
     }
 }
 
