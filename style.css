@@ -81,6 +81,9 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
     padding: clamp(4rem, 10vw, 9rem) 0;
     position: relative;
 }
+/* Inner pages: clear the fixed navbar on the first section */
+.page-top { padding-top: calc(var(--nav-h) + clamp(2rem, 6vw, 5rem)); }
+.page-cta { display: flex; justify-content: center; margin-top: clamp(2.5rem, 6vw, 4.5rem); }
 
 /* ---- Typography ---- */
 .section-title {
@@ -239,6 +242,8 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
 }
 .nav-link:hover { color: var(--ink); }
 .nav-link:hover::after { width: 100%; }
+.nav-link.active { color: var(--ink); }
+.nav-link.active::after { width: 100%; }
 
 .nav-cta {
     display: inline-flex; align-items: center; gap: .55rem;

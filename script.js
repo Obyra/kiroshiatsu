@@ -284,7 +284,7 @@
 
     if (meinungForm) {
         const PHONE_WA = '4917647115700';
-        const EMAIL = 'info@kiroshiatsu.de';
+        const EMAIL = 'kiroshiatsu@gmail.com';
 
         let sendVia = 'whatsapp';
         qsa('[data-send]', meinungForm).forEach(btn => {
