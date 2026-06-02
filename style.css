@@ -2613,3 +2613,63 @@ body.modal-open { overflow: hidden; }
     .beschwerden-cta { padding: 1.25rem; }
     .beschwerden-list li { font-size: 1.05rem; gap: 1rem; }
 }
+
+/* =========================================================
+   RECHTLICHES — Impressum / Datenschutz / AGB / Widerruf
+   ========================================================= */
+.legal {
+    max-width: 760px;
+    margin: 0 auto;
+}
+.legal h2.legal-heading {
+    font-family: var(--f-serif);
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.2;
+    letter-spacing: -.01em;
+    color: var(--ink);
+    margin: 2.75rem 0 1rem;
+}
+.legal h2.legal-heading:first-of-type { margin-top: 1rem; }
+.legal h3.legal-subheading {
+    font-family: var(--f-sans);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--ink-80);
+    margin: 1.75rem 0 .5rem;
+}
+.legal p,
+.legal li {
+    font-family: var(--f-sans);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--ink-60);
+    margin-bottom: 1rem;
+    max-width: 70ch;
+}
+.legal strong { font-weight: 600; color: var(--ink-80); }
+.legal a { color: var(--gold-deep); text-decoration: underline; text-underline-offset: 2px; }
+.legal a:hover { color: var(--ink); }
+.legal address {
+    font-style: normal;
+    line-height: 1.8;
+    color: var(--ink-60);
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+.legal ul { list-style: disc; padding-left: 1.4rem; margin-bottom: 1rem; }
+.legal li { margin-bottom: .4rem; }
+.legal hr {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: 2.5rem 0;
+}
+.legal .legal-note {
+    font-size: .85rem;
+    color: var(--muted);
+    border-left: 2px solid var(--gold);
+    padding-left: 1rem;
+    margin-top: 3rem;
+    font-style: italic;
+}

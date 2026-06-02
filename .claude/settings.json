@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i 's/Mo–Fr · 9:00–18:00/Mo–Fr · 12:00–19:00/g' *.html)",
+      "Bash(sed -i 's/9:00 – 18:00 Uhr/12:00 – 19:00 Uhr/g' kontakt.html)",
+      "Bash(sed -i 's#Schmerzlinderung und muskulären Regeneration\\\\.#Schmerzlinderung und muskulären Regeneration.<br/>#g' *.html)",
+      "Bash(sed -i 's#Victor A\\\\. Koldobsky · Bielefeld · seit 2013\\\\.#Victor A. Koldobsky<br/>Bielefeld<br/>Seit 2013.#g' *.html)"
+    ]
+  }
+}

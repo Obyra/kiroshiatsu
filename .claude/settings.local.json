@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api *)",
+      "Bash(git fetch *)",
+      "Bash(git pull *)",
+      "Bash(nslookup -type=NS kiroshiatsu.de 8.8.8.8)",
+      "Bash(nslookup kiroshiatsu.de 8.8.8.8)",
+      "Bash(ls /c/Users/ECSA/.claude/projects/c--Users-ECSA-Desktop-BREN-kiroshiatsu/memory/ 2>&1)",
+      "Read(//c/Users/ECSA/.claude/projects/c--Users-ECSA-Desktop-BREN-kiroshiatsu/memory//**)"
+    ]
+  }
+}
