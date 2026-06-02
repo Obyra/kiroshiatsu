@@ -156,6 +156,9 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
 .loader-word:nth-child(3){
     animation-delay: .3s;
     font-style: italic; color: var(--sage-deep);
+    font-size: .45em;
+    align-self: flex-start;
+    margin-left: -.4rem;
 }
 @keyframes loader-in {
     to { opacity: 1; transform: translateY(0); }
