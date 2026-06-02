@@ -2679,7 +2679,7 @@ body.modal-open { overflow: hidden; }
 
 /* Registered-trademark mark — kept small and raised everywhere */
 .reg {
-    font-size: .5em;
+    font-size: .38em;
     vertical-align: super;
     line-height: 0;
     letter-spacing: 0;
