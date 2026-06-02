@@ -2673,3 +2673,12 @@ body.modal-open { overflow: hidden; }
     margin-top: 3rem;
     font-style: italic;
 }
+
+/* Registered-trademark mark — kept small and raised everywhere */
+.reg {
+    font-size: .5em;
+    vertical-align: super;
+    line-height: 0;
+    letter-spacing: 0;
+    font-style: normal;
+}
