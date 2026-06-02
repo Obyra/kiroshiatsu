@@ -392,8 +392,8 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
 .hero-title {
     font-family: var(--f-serif);
     font-weight: 400;
-    font-size: clamp(3rem, 9vw, 8.5rem);
-    line-height: .95;
+    font-size: clamp(2.4rem, 7.5vw, 7rem);
+    line-height: 1;
     letter-spacing: -0.03em;
     color: var(--ink);
     margin-bottom: 2.5rem;
@@ -401,6 +401,8 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
 .hero-title .line {
     display: block;
     overflow: hidden;
+    padding-bottom: .22em;
+    margin-bottom: -.22em;
 }
 .hero-title .line > span {
     display: inline-block;
