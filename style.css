@@ -401,8 +401,8 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
 .hero-title .line {
     display: block;
     overflow: hidden;
-    padding-bottom: .22em;
-    margin-bottom: -.22em;
+    padding-bottom: .3em;
+    margin-bottom: -.3em;
 }
 .hero-title .line > span {
     display: inline-block;
