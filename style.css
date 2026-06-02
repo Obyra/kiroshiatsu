@@ -2685,6 +2685,13 @@ body.modal-open { overflow: hidden; }
     font-style: italic;
 }
 
+/* Methode-Hero: Untertitel-Zeile immer einzeilig */
+.method-hero-sub {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: clamp(1.15rem, 4vw, 2.6rem);
+}
+
 /* Registered-trademark mark — kept small and raised everywhere */
 .reg {
     font-size: .38em;
