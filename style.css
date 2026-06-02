@@ -742,11 +742,12 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
 }
 .method-card h3 {
     font-family: var(--f-serif);
-    font-size: 1.75rem;
+    font-size: clamp(1rem, 1.3vw, 1.25rem);
     font-weight: 400;
     color: var(--ink);
     margin-bottom: 1rem;
-    letter-spacing: -.01em;
+    letter-spacing: -.015em;
+    white-space: nowrap;
 }
 .method-card p {
     color: var(--muted);
@@ -1970,6 +1971,13 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.method-media-link {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: block;
+    cursor: pointer;
 }
 .method-media img {
     position: absolute;
