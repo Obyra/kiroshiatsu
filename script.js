@@ -236,10 +236,12 @@
                     feedback.classList.add('error');
                     feedback.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie an kiroshiatsu@gmail.com.';
                 }
+                feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
             })
             .catch(() => {
                 feedback.classList.add('error');
                 feedback.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie an kiroshiatsu@gmail.com.';
+                feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
             })
             .finally(() => {
                 btn.innerHTML = originalHTML;
