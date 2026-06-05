@@ -229,13 +229,12 @@
             .then((res) => res.json())
             .then((json) => {
                 if (json.success) {
-                    feedback.classList.add('success');
-                    feedback.textContent = 'Danke! Ihre Anfrage wurde gesendet. Wir melden uns zeitnah zurück.';
                     form.reset();
-                } else {
-                    feedback.classList.add('error');
-                    feedback.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie an kiroshiatsu@gmail.com.';
+                    window.location.href = 'danke.html';
+                    return;
                 }
+                feedback.classList.add('error');
+                feedback.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie an kiroshiatsu@gmail.com.';
                 feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
             })
             .catch(() => {
