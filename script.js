@@ -215,19 +215,36 @@
 
         if (!ok) return;
 
-        // Simulate submit
+        // Send via Web3Forms
         const btn = form.querySelector('button[type="submit"]');
         const originalHTML = btn.innerHTML;
         btn.disabled = true;
         btn.innerHTML = '<span>Wird gesendet…</span>';
 
-        setTimeout(() => {
-            feedback.classList.add('success');
-            feedback.textContent = 'Danke! Ihre Anfrage wurde gesendet. Wir melden uns zeitnah zurück.';
-            btn.innerHTML = originalHTML;
-            btn.disabled = false;
-            form.reset();
-        }, 900);
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: data,
+        })
+            .then((res) => res.json())
+            .then((json) => {
+                if (json.success) {
+                    feedback.classList.add('success');
+                    feedback.textContent = 'Danke! Ihre Anfrage wurde gesendet. Wir melden uns zeitnah zurück.';
+                    form.reset();
+                } else {
+                    feedback.classList.add('error');
+                    feedback.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie an kiroshiatsu@gmail.com.';
+                }
+            })
+            .catch(() => {
+                feedback.classList.add('error');
+                feedback.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie an kiroshiatsu@gmail.com.';
+            })
+            .finally(() => {
+                btn.innerHTML = originalHTML;
+                btn.disabled = false;
+            });
     });
 
     /* -----------------------------------------------------
