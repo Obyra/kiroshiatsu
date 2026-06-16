@@ -11,7 +11,8 @@
       "Bash(cd /c/Users/ECSA/Desktop/BREN/kiroshiatsu *)",
       "Bash(python -c \"import xml.dom.minidom as m; m.parse\\('sitemap.xml'\\); print\\('XML válido ✓'\\)\")",
       "Bash(python -c \"import xml.dom.minidom as m; m.parse\\('sitemap.xml'\\); print\\('XML valido'\\)\")",
-      "Bash(python -)"
+      "Bash(python -)",
+      "WebFetch(domain:www.manuelletherapie-bielefeld.de)"
     ],
     "additionalDirectories": [
       "c:\\Users\\ECSA\\Desktop\\BREN\\kiroshiatsu"
