@@ -7,7 +7,8 @@
       "Bash(sed -i 's#Victor A\\\\. Koldobsky · Bielefeld · seit 2013\\\\.#Victor A. Koldobsky<br/>Bielefeld<br/>Seit 2013.#g' *.html)",
       "Bash(curl -s -o /dev/null -w \"Estado HTTP imagen en vivo: %{http_code}\\\\n\" \"https://kiroshiatsu.de/images/therapies/kiroshiatsu.png\")",
       "Bash(node --check script.js)",
-      "Bash(sed -i 's/kiroshiatsu@gmail\\\\.com/info@kiroshiatsu.de/g' *.html script.js && echo \"---VERIFICACION \\(debe quedar 0\\)---\" && grep -rc \"kiroshiatsu@gmail.com\" *.html script.js | grep -v \":0\" || echo \"OK: ninguna ocurrencia restante del correo viejo\" && echo \"---NUEVAS \\(conteo\\)---\" && grep -rc \"info@kiroshiatsu.de\" *.html script.js | grep -v \":0\")"
+      "Bash(sed -i 's/kiroshiatsu@gmail\\\\.com/info@kiroshiatsu.de/g' *.html script.js && echo \"---VERIFICACION \\(debe quedar 0\\)---\" && grep -rc \"kiroshiatsu@gmail.com\" *.html script.js | grep -v \":0\" || echo \"OK: ninguna ocurrencia restante del correo viejo\" && echo \"---NUEVAS \\(conteo\\)---\" && grep -rc \"info@kiroshiatsu.de\" *.html script.js | grep -v \":0\")",
+      "Bash(cd /c/Users/ECSA/Desktop/BREN/kiroshiatsu *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\ECSA\\Desktop\\BREN\\kiroshiatsu"
