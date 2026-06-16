@@ -1263,7 +1263,7 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
 }
 .footer-top {
     display: grid;
-    grid-template-columns: 1.5fr repeat(3, 1fr);
+    grid-template-columns: 1.5fr repeat(4, 1fr);
     gap: 3rem;
     padding-bottom: 4rem;
     border-bottom: 1px solid var(--line);
