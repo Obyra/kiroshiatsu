@@ -13,4 +13,10 @@
   <url><loc>https://kiroshiatsu.de/datenschutz.html</loc><priority>0.3</priority></url>
   <url><loc>https://kiroshiatsu.de/agb.html</loc><priority>0.3</priority></url>
   <url><loc>https://kiroshiatsu.de/widerrufsrecht.html</loc><priority>0.3</priority></url>
+  <url>
+    <loc>https://kiroshiatsu.de/blog/rueckenschmerzen-therapie.html</loc>
+    <lastmod>2024-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
