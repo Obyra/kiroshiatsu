@@ -234,12 +234,12 @@
                     return;
                 }
                 feedback.classList.add('error');
-                feedback.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie an kiroshiatsu@gmail.com.';
+                feedback.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie an info@kiroshiatsu.de.';
                 feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
             })
             .catch(() => {
                 feedback.classList.add('error');
-                feedback.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie an kiroshiatsu@gmail.com.';
+                feedback.textContent = 'Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder schreiben Sie an info@kiroshiatsu.de.';
                 feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
             })
             .finally(() => {
@@ -302,7 +302,7 @@
 
     if (meinungForm) {
         const PHONE_WA = '4917647115700';
-        const EMAIL = 'kiroshiatsu@gmail.com';
+        const EMAIL = 'info@kiroshiatsu.de';
 
         let sendVia = 'whatsapp';
         qsa('[data-send]', meinungForm).forEach(btn => {
