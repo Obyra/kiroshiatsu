@@ -818,11 +818,17 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
 }
 .services.page-top { padding-bottom: clamp(2rem, 4vw, 3.5rem); }
 .rezept { padding-top: clamp(2rem, 4vw, 3.5rem); }
-.beschwerden .col-text .section-title {
-    white-space: nowrap;
+.beschwerden-header {
     text-align: center;
-    font-size: clamp(1.4rem, 4vw, 2.8rem);
+    margin: 0 auto clamp(2rem, 4vw, 3rem);
 }
+.beschwerden-header .eyebrow { justify-content: center; }
+.beschwerden-header .section-title {
+    white-space: nowrap;
+    font-size: clamp(1.4rem, 6vw, 5rem);
+    margin-bottom: 0;
+}
+.beschwerden .grid-split { align-items: start; }
 
 .services-grid {
     display: grid;
