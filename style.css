@@ -709,8 +709,8 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
 }
 .method-header .lead {
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 0 1.25rem;
+    text-align: left;
 }
 .method-header .eyebrow { justify-content: center; }
 .method-header .eyebrow::before { margin-right: 0; }
@@ -2692,9 +2692,16 @@ body.modal-open { overflow: hidden; }
 
 /* Methode-Hero: Untertitel-Zeile immer einzeilig */
 .method-hero-sub {
-    display: inline-block;
-    white-space: nowrap;
-    font-size: clamp(1.15rem, 4vw, 2.6rem);
+    display: block;
+    text-align: left;
+    white-space: normal;
+    font-size: clamp(1rem, 2.1vw, 1.5rem);
+    margin-top: 1.4rem;
+}
+.method-hero-sub .dash {
+    font-size: 0.55em;
+    vertical-align: 0.12em;
+    margin: 0 0.15em;
 }
 
 .method-hero-line1 {
