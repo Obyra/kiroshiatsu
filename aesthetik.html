@@ -227,6 +227,28 @@
                     </article>
                 </div>
 
+                <div class="aesthetik-gallery reveal" aria-label="Bildergalerie Ästhetik">
+                    <div class="gallery-viewport">
+                        <div class="gallery-track">
+                            <div class="gallery-slide"><img src="images/aesthetik/carrusel/imagen1.png" alt="Ästhetische Behandlung 1" loading="lazy" /></div>
+                            <div class="gallery-slide"><img src="images/aesthetik/carrusel/imagen2.png" alt="Ästhetische Behandlung 2" loading="lazy" /></div>
+                            <div class="gallery-slide"><img src="images/aesthetik/carrusel/imagen3.png" alt="Ästhetische Behandlung 3" loading="lazy" /></div>
+                            <div class="gallery-slide"><img src="images/aesthetik/carrusel/imagen4.png" alt="Ästhetische Behandlung 4" loading="lazy" /></div>
+                            <div class="gallery-slide"><img src="images/aesthetik/carrusel/imagen5.png" alt="Ästhetische Behandlung 5" loading="lazy" /></div>
+                            <div class="gallery-slide"><img src="images/aesthetik/carrusel/imagen6.png" alt="Ästhetische Behandlung 6" loading="lazy" /></div>
+                            <div class="gallery-slide"><img src="images/aesthetik/carrusel/imagen7.png" alt="Ästhetische Behandlung 7" loading="lazy" /></div>
+                            <div class="gallery-slide"><img src="images/aesthetik/carrusel/imagen8.png" alt="Ästhetische Behandlung 8" loading="lazy" /></div>
+                        </div>
+                    </div>
+                    <button class="gallery-arrow gallery-prev" type="button" aria-label="Vorheriges Bild">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <button class="gallery-arrow gallery-next" type="button" aria-label="Nächstes Bild">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
+                    <div class="gallery-dots" aria-hidden="true"></div>
+                </div>
+
                 <div class="page-cta reveal">
                     <a href="kontakt.html" class="btn btn-primary" data-magnetic>
                         <span>Termin vereinbaren</span>
@@ -301,5 +323,37 @@
     </a>
 
     <script src="script.js"></script>
+    <script>
+    (function(){
+        var g = document.querySelector('.aesthetik-gallery');
+        if(!g) return;
+        var track = g.querySelector('.gallery-track');
+        var slides = g.querySelectorAll('.gallery-slide');
+        var dotsWrap = g.querySelector('.gallery-dots');
+        var i = 0, n = slides.length, timer;
+        if(n <= 1) return;
+        for(var d = 0; d < n; d++){
+            var b = document.createElement('button');
+            b.className = 'gallery-dot' + (d === 0 ? ' active' : '');
+            b.type = 'button';
+            b.setAttribute('aria-label', 'Bild ' + (d + 1));
+            (function(idx){ b.addEventListener('click', function(){ go(idx); reset(); }); })(d);
+            dotsWrap.appendChild(b);
+        }
+        var dots = dotsWrap.querySelectorAll('.gallery-dot');
+        function go(idx){
+            i = (idx + n) % n;
+            track.style.transform = 'translateX(' + (-i * 100) + '%)';
+            for(var k = 0; k < n; k++){ dots[k].classList.toggle('active', k === i); }
+        }
+        function start(){ timer = setInterval(function(){ go(i + 1); }, 4500); }
+        function reset(){ clearInterval(timer); start(); }
+        g.querySelector('.gallery-prev').addEventListener('click', function(){ go(i - 1); reset(); });
+        g.querySelector('.gallery-next').addEventListener('click', function(){ go(i + 1); reset(); });
+        g.addEventListener('mouseenter', function(){ clearInterval(timer); });
+        g.addEventListener('mouseleave', start);
+        start();
+    })();
+    </script>
 </body>
 </html>

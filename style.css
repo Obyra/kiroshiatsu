@@ -1671,6 +1671,67 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
     margin-right: auto;
 }
 
+/* Ästhetik-Galerie / Karussell */
+.aesthetik-gallery {
+    position: relative;
+    max-width: 980px;
+    margin: clamp(3rem, 6vw, 5rem) auto 0;
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    box-shadow: 0 30px 70px -35px rgba(44,42,38,.35);
+}
+.gallery-viewport { overflow: hidden; border-radius: var(--r-xl); }
+.gallery-track {
+    display: flex;
+    transition: transform .7s cubic-bezier(.4,0,.2,1);
+    will-change: transform;
+}
+.gallery-slide { min-width: 100%; }
+.gallery-slide img {
+    display: block;
+    width: 100%;
+    height: clamp(280px, 46vw, 560px);
+    object-fit: cover;
+}
+.gallery-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.85);
+    color: var(--ink);
+    border: none;
+    cursor: pointer;
+    display: grid; place-items: center;
+    box-shadow: 0 6px 20px -6px rgba(0,0,0,.3);
+    transition: background .3s var(--ease), transform .3s var(--ease);
+    z-index: 2;
+}
+.gallery-arrow:hover { background: #fff; transform: translateY(-50%) scale(1.06); }
+.gallery-prev { left: 1rem; }
+.gallery-next { right: 1rem; }
+.gallery-dots {
+    position: absolute;
+    bottom: 1rem; left: 0; right: 0;
+    display: flex; gap: .5rem;
+    justify-content: center;
+    z-index: 2;
+}
+.gallery-dot {
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.55);
+    border: none; cursor: pointer; padding: 0;
+    transition: all .3s var(--ease);
+}
+.gallery-dot.active { background: #fff; width: 24px; border-radius: 5px; }
+@media (max-width: 640px) {
+    .gallery-arrow { width: 40px; height: 40px; }
+    .gallery-prev { left: .6rem; }
+    .gallery-next { right: .6rem; }
+}
+
 .aesthetik-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
