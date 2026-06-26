@@ -2693,14 +2693,14 @@ body.modal-open { overflow: hidden; }
 /* Methode-Hero: Untertitel-Zeile immer einzeilig */
 .method-hero-sub {
     display: block;
-    text-align: left;
+    text-align: center;
     white-space: normal;
-    font-size: clamp(1rem, 2.1vw, 1.5rem);
+    font-size: clamp(1.35rem, 2.6vw, 2rem);
     margin-top: 1.4rem;
 }
 .method-hero-sub .dash {
-    font-size: 0.55em;
-    vertical-align: 0.12em;
+    font-size: 0.5em;
+    vertical-align: 0.14em;
     margin: 0 0.15em;
 }
 
