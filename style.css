@@ -425,7 +425,7 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
     font-size: clamp(1rem, 1.35vw, 1.2rem);
     line-height: 1.7;
     color: var(--ink-60);
-    max-width: 46ch;
+    max-width: 72ch;
     margin-bottom: 3rem;
     font-weight: 300;
 }
