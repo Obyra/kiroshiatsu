@@ -1495,6 +1495,8 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
     width: 100%; height: 100%;
     object-fit: cover;
     object-position: center 20%;
+    transform: scale(0.88);
+    transform-origin: center 35%;
     z-index: 0;
     filter: saturate(.92) contrast(1.02);
     transition: filter var(--t-slow) var(--ease);
@@ -2228,8 +2230,8 @@ body.modal-open { overflow: hidden; }
    JOURNEY (Argentina -> Lanzarote -> Bielefeld)
    ========================================================= */
 .journey {
-    margin-top: clamp(4rem, 8vw, 7rem);
-    padding-top: clamp(3rem, 6vw, 5rem);
+    margin-top: clamp(2rem, 4vw, 3.5rem);
+    padding-top: clamp(2rem, 4vw, 3.5rem);
     border-top: 1px solid var(--line);
 }
 .journey-header {
