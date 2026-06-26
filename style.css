@@ -799,6 +799,22 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
     white-space: nowrap;
     font-size: clamp(1.4rem, 4.6vw, 3.8rem);
 }
+.services.page-top .services-header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.services.page-top .services-header .section-intro {
+    margin-left: auto;
+    margin-right: auto;
+}
+.services.page-top .section-title {
+    white-space: nowrap;
+    font-size: clamp(1.4rem, 5vw, 4rem);
+}
+@media (min-width: 1101px) {
+    .services-grid [data-therapy="ohrakupunktur"] { grid-column: 2; }
+}
 
 .services-grid {
     display: grid;
