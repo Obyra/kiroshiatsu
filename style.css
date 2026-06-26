@@ -704,8 +704,13 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
 
 .method-header {
     text-align: center;
-    max-width: 760px;
+    max-width: min(920px, 92vw);
     margin: 0 auto 5rem;
+}
+.method-header .lead {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .method-header .eyebrow { justify-content: center; }
 .method-header .eyebrow::before { margin-right: 0; }
