@@ -795,6 +795,10 @@ em { font-style: italic; font-family: var(--f-serif); font-weight: 400; }
     white-space: nowrap;
     font-size: clamp(1.5rem, 5vw, 3.6rem);
 }
+.distinguish-header .section-title {
+    white-space: nowrap;
+    font-size: clamp(1.4rem, 4.6vw, 3.8rem);
+}
 
 .services-grid {
     display: grid;
